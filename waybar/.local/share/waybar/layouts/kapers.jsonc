@@ -26,20 +26,21 @@
     "group/pill#left2": {
         "orientation": "inherit",
         "modules": [
-            "idle_inhibitor",
-            "clock"
+            "hyprland/workspaces",
+            "hyprland/window"
         ]
     },
+
     "modules-center": [
         "group/pill#center"
     ],
     "group/pill#center": {
         "modules": [
-            "hyprland/workspaces",
-            "hyprland/window"
+            "idle_inhibitor",
+            "clock"
         ],
-        "orientation": "inherit"
-    },
+    "orientation": "inherit"
+  },
     "modules-right": [
         "group/pill#right1",
         "group/pill#right2",
