@@ -17,6 +17,7 @@
 /*
 "../../../" Use relative path to navigate $HOME $HOME/
 */
+
 @import "../../../../.config/waybar/includes/border-radius.css";
 @import "../../../../.config/waybar/includes/global.css";
 
