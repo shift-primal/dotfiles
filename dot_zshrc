@@ -1,0 +1,26 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt extendedglob
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/kasper/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+EDITOR=nvim
+VISUAL=nvim
+
+export PATH="$PATH:$HOME/.local/bin"
+
+eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.omp.json)"
+export PATH="$HOME/.dotnet/tools:$PATH"
+alias goto_exam3='cd Documents/emne3_eksamen/min_oppgave/CarRental'
+alias goto_sysharp='cd ~/Documents/DotNetProjects/sysharp/src/sysharp'
+alias fixmon='hyprctl keyword monitor DP-1, disable && sleep 0.5 && hyprctl keyword monitor DP-1,2560x1440@144,0x0,1'
