@@ -1,0 +1,55 @@
+/*-----------------
+    system tray
+-----------------*/
+
+#network {
+	padding: 0 6px 0 4px;
+  color: @network;
+}
+
+#bluetooth {
+	padding: 0 5px;
+  color: @bluetooth;
+}
+
+#custom-system_update {
+	padding: 0 8px 0 2px;
+  color: @pacman;
+}
+
+/*----------------
+    media info
+----------------*/
+
+#mpris {
+	padding: 0 12px;
+}
+
+/*------------
+    volume
+------------*/
+
+#pulseaudio,
+#wireplumber {
+}
+
+/*----------
+    time
+----------*/
+
+#clock.time {
+	padding-right: 6px;
+}
+#custom-right_div.3 {
+}
+
+/*----------
+    date
+----------*/
+
+#clock.date {
+	padding-left: 6px;
+}
+
+
+

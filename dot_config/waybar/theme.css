@@ -1,0 +1,16 @@
+@define-color background-darker rgba(25, 23, 36, 230);
+@define-color background #1f1d2e;
+@define-color selection #26233a;
+@define-color foreground #e0def4;
+@define-color comment #908caa;
+@define-color cyan #9ccfd8;
+@define-color green #31748f;
+@define-color orange #f6c177;
+@define-color pink #eb6f92;
+@define-color purple #c4a7e7;
+@define-color red #eb6f92;
+@define-color yellow #f6c177;
+
+@define-color pacman @orange;
+@define-color network @pink;
+@define-color bluetooth @cyan;

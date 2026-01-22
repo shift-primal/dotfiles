@@ -1,0 +1,1 @@
+pkill hyprpicker || hyprpicker -a

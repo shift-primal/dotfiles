@@ -1,0 +1,68 @@
+### VARIABLES ###
+
+$OPACITY_ACTIVE = 0.95
+$OPACITY_INACTIVE = 0.9
+
+### WINDOW RULES ###
+
+# General rules - suppress maximize event for all windows
+# windowrule = suppress_event maximize, match:class .*
+# windowrule = suppress_event fullscreen, match:class .*
+
+# Don't focus empty xwayland windows
+windowrule = no_initial_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0
+
+# Idle inhibit rules (prevent screen from sleeping during media playback)
+windowrule = idle_inhibit fullscreen, match:class ^(.*celluloid.*)$|^(.*mpv.*)$|^(.*vlc.*)$
+windowrule = idle_inhibit fullscreen, match:class ^(.*[Ss]potify.*)$
+windowrule = idle_inhibit fullscreen, match:class ^(.*LibreWolf.*)$|^(.*floorp.*)$|^(.*brave-browser.*)$|^(.*firefox.*)$|^(.*chromium.*)$|^(.*zen.*)$|^(.*vivaldi.*)$
+
+# Picture-in-picture windows
+windowrule = float on, match:tag picture-in-picture
+windowrule = keep_aspect_ratio on, match:tag picture-in-picture
+windowrule = move 73% 72%, match:tag picture-in-picture
+windowrule = size 25%, match:tag picture-in-picture
+windowrule = pin on, match:tag picture-in-picture
+
+# Opacity rules
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(firefox)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^([Cc]ode)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(code-url-handler)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(code-insiders-url-handler)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(kitty)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(org.gnome.Nautilus)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(nwg-look)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(qt5ct)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(qt6ct)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(org.pulseaudio.pavucontrol)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(org.freedesktop.impl.portal.desktop.gtk)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(org.freedesktop.impl.portal.desktop.hyprland)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^([Ss]team)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(steamwebhelper)$
+windowrule = opacity $OPACITY_ACTIVE $OPACITY_INACTIVE, match:class ^(equibop)$
+
+# Security - no screenshare on Bitwarden
+windowrule = no_screen_share on, match:class ^(Bitwarden)$
+
+# Application-specific fixes - FL Studio
+windowrule = workspace special:hidden silent, match:class ^(fl64\.exe)$, match:title ^$
+windowrule = tile on, match:class ^(fl64\.exe)$, match:title ^(FL Studio.*)
+
+# Steam - force tile mode
+windowrule = tile on, match:class ^([Ss]team)$
+windowrule = fullscreen on, match:class ^(steam_app_1422450)$
+windowrule = monitor DP-1, match:class ^(steam_app_1422450)$
+
+
+# JetBrains IDE fixes
+windowrule = float on, match:class ^(jetbrains-.*)$, match:title ^(win.*)$
+windowrule = no_initial_focus on, match:class ^(jetbrains-.*)$
+windowrule = opacity 0.98 0.95, match:class ^(jetbrains-.*)$
+
+### LAYER RULES ###
+
+layerrule = blur on, match:namespace rofi
+layerrule = blur on, match:namespace waybar
+layerrule = ignore_alpha 0, match:namespace waybar
+layerrule = no_anim on, match:namespace hyprpicker
+layerrule = no_anim on, match:namespace selection
