@@ -1,55 +1,51 @@
-/*-----------------
-    system tray
------------------*/
+#custom-recording {
+  padding: 0 6px;
+}
+
+#custom-recording.idle {
+  color: @comment;
+}
+
+#custom-recording.recording {
+  color: @recording;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
 
 #network {
-	padding: 0 6px 0 4px;
+  padding: 0 6px 0 4px;
   color: @network;
 }
 
 #bluetooth {
-	padding: 0 5px;
+  padding: 0 5px;
   color: @bluetooth;
 }
 
 #custom-system_update {
-	padding: 0 8px 0 2px;
+  padding: 0 8px 0 2px;
   color: @pacman;
 }
 
-/*----------------
-    media info
-----------------*/
-
 #mpris {
-	padding: 0 12px;
+  padding: 0 12px;
 }
-
-/*------------
-    volume
-------------*/
 
 #pulseaudio,
 #wireplumber {
 }
 
-/*----------
-    time
-----------*/
-
 #clock.time {
-	padding-right: 6px;
+  padding-right: 6px;
 }
 #custom-right_div.3 {
 }
 
-/*----------
-    date
-----------*/
-
 #clock.date {
-	padding-left: 6px;
+  padding-left: 6px;
 }
-
-
-

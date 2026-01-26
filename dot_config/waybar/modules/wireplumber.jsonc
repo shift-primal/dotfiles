@@ -1,0 +1,34 @@
+{
+	"group/wireplumber": {
+		"orientation": "horizontal",
+		"modules": ["wireplumber#output", "wireplumber#input"],
+		"drawer": {
+			"transition-left-to-right": false
+		}
+	},
+
+	"wireplumber#output": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟 {volume}%",
+		"format-icons": ["󰕿", "󰖀", "󰕾"],
+		"min-length": 7,
+		"max-length": 7,
+		"on-click": "~/user_scripts/waybar/volume.sh output mute",
+		"on-scroll-up": "~/user_scripts/waybar/volume.sh output raise",
+		"on-scroll-down": "~/user_scripts/waybar/volume.sh output lower",
+		"tooltip-format": "Device: {node_name}",
+		"node-type": "Audio/Sink"
+	},
+
+	"wireplumber#input": {
+		"format": "󰍬 {volume}%",
+		"format-muted": "󰍭 {volume}%",
+		"min-length": 7,
+		"max-length": 7,
+		"on-click": "~/user_scripts/waybar/volume.sh input mute",
+		"on-scroll-up": "~/user_scripts/waybar/volume.sh input raise",
+		"on-scroll-down": "~/user_scripts/waybar/volume.sh input lower",
+		"tooltip-format": "Device: {node_name}",
+		"node-type": "Audio/Source"
+	}
+}

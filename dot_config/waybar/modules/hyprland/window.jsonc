@@ -1,20 +1,15 @@
 {
-	"hyprland/window": {
-		"format": "{}",
-		"rewrite": {
-			"": "Desktop",
-			"kitty": "Terminal",
-			"zsh": "Terminal",
-			"~ - fish": "Terminal",
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "": "Desktop",
+      "kitty": "Terminal",
+      "zsh": "Terminal",
+      "~ - fish": "Terminal",
       "Files": "Files"
-		},
-		// "separate-outputs":
-		"icon": true,
-		// "icon-size":
-		// "min-length":
-		"max-length": 32,
-		// "tooltip":
-		"swap-icon-label": false
-		// "expand":
-	}
+    },
+    "icon": true,
+    "max-length": 32,
+    "swap-icon-label": false
+  }
 }

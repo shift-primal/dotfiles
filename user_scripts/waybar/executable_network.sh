@@ -43,7 +43,7 @@ select-network() {
 	header=$(head -n 1 <<< "$list")
 
 	# shellcheck disable=SC1090
-	. ~/.config/waybar/scripts/fzf-colors.sh 2> /dev/null
+	. ~/user_scripts/waybar/fzf-colors.sh 2> /dev/null
 
 	local opts=(
 		--border=sharp

@@ -11,6 +11,9 @@
 @define-color red #eb6f92;
 @define-color yellow #f6c177;
 
+@define-color hover-fg alpha(@foreground, 0.6);
+
 @define-color pacman @orange;
 @define-color network @pink;
 @define-color bluetooth @cyan;
+@define-color recording @red;

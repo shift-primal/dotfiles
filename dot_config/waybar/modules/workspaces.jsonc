@@ -1,0 +1,16 @@
+{
+  "workspaces": {
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "persistent": "*"
+    },
+    "persistent-only": false,
+    "workspace-taskbar": {},
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "cursor": true
+  }
+}
