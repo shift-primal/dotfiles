@@ -4,6 +4,7 @@
     "format-paused": "{status_icon} {title}",
     "tooltip-format": "Playing: {title} - {artist}",
     "tooltip-format-paused": "Paused: {title} - {artist}",
+    "max-length": 16,
     "on-click-right": "kitty -e spotify_player",
     "player-icons": {
       "default": "󰐊"

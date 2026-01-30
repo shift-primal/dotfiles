@@ -49,11 +49,11 @@ function M.toggle()
   if M.arrows_disabled then
     enable_arrows()
     M.arrows_disabled = false
-    vim.notify("🏹 Arrow keys ENABLED (training mode OFF)", vim.log.levels.INFO)
+    -- vim.notify("🏹 Arrow keys ENABLED (training mode OFF)", vim.log.levels.INFO)
   else
     disable_arrows()
     M.arrows_disabled = true
-    vim.notify("🎯 Arrow keys DISABLED (training mode ON) - use hjkl!", vim.log.levels.INFO)
+    -- vim.notify("🎯 Arrow keys DISABLED (training mode ON) - use hjkl!", vim.log.levels.INFO)
   end
 end
 
@@ -85,7 +85,7 @@ function M.setup(opts)
         vim.defer_fn(function()
           disable_arrows()
           M.arrows_disabled = true
-          vim.notify("🎯 Arrow Trainer: hjkl mode active! Use :ArrowToggle to switch", vim.log.levels.INFO)
+          -- vim.notify("🎯 Arrow Trainer: hjkl mode active! Use :ArrowToggle to switch", vim.log.levels.INFO)
         end, 100)
       end,
     })

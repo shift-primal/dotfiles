@@ -1,26 +1,46 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt extendedglob
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/kasper/.zshrc'
+  # === Path ===
+  export PATH="$HOME/.local/bin:$HOME/.dotnet/tools:$PATH"
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+  # === Environment ===
+  export EDITOR=nvim
+  export VISUAL=nvim
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+  # === History ===
+  HISTFILE=~/.histfile
+  HISTSIZE=10000
+  SAVEHIST=10000
+  setopt HIST_IGNORE_DUPS
+  setopt HIST_IGNORE_SPACE
+  setopt SHARE_HISTORY
 
-EDITOR=nvim
-VISUAL=nvim
+  # === Completion ===
+  autoload -Uz compinit
+  compinit
+  zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-export PATH="$PATH:$HOME/.local/bin"
+  # === Aliases ===
+  alias ff='fastfetch'
 
-eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.omp.json)"
-export PATH="$HOME/.dotnet/tools:$PATH"
-alias goto_exam3='cd Documents/emne3_eksamen/min_oppgave/CarRental'
-alias goto_sysharp='cd ~/Documents/DotNetProjects/sysharp/src/sysharp'
-alias fixmon='hyprctl keyword monitor DP-1, disable && sleep 0.5 && hyprctl keyword monitor DP-1,2560x1440@144,0x0,1'
+  alias fixmon='for m in $(hyprctl monitors -j | jq -r ".[].name"); do hyprctl keyword monitor "$m,disable";
+   done && sleep 0.5 && hyprctl reload'
+
+  alias conf='cd ~/.config'
+  alias lc='cd ~/.local'
+
+  alias conf_nvim='cd ~/.config/nvim'
+  alias conf_hypr='cd ~/.config/hypr'
+  alias conf_way='cd ~/.config/waybar'
+  alias conf_rofi='cd ~/.config/rofi'
+
+  alias doc='cd ~/Documents'
+  alias pic='cd ~/Pictures'
+  alias dl='cd ~/Downloads'
+
+  alias proj_net='cd ~/Documents/DotNetProjects'
+
+  alias sdtui='systemd-manager-tui'
+
+  alias restartdisc='pkill -f "electron.*equibop"; sleep 3; equibop &'
+
+  # === Prompt ===
+  eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.omp.json)"

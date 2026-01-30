@@ -15,7 +15,7 @@
     "~/.config/waybar/modules/bluetooth.jsonc",
     "~/.config/waybar/modules/custom/system_update.jsonc",
     "~/.config/waybar/modules/mpris.jsonc",
-    "~/.config/waybar/modules/pulseaudio.jsonc",
+    "~/.config/waybar/modules/wireplumber.jsonc",
 
     // dividers
     "~/.config/waybar/modules/custom/dividers.jsonc"
@@ -31,7 +31,7 @@
     "bluetooth",
     "custom/system_update",
     "mpris",
-    "group/pulseaudio",
+    "group/wireplumber",
     "backlight",
     "battery",
     "clock#date",

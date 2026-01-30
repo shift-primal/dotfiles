@@ -1,5 +1,5 @@
 #custom-recording {
-  padding: 0 6px;
+  padding: 0 10px 0 2px;
 }
 
 #custom-recording.idle {
@@ -12,32 +12,39 @@
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.4; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #network {
-  padding: 0 6px 0 4px;
+  padding: 0 10px 0 2px;
   color: @network;
 }
 
 #bluetooth {
-  padding: 0 5px;
+  padding: 0 10px 0 2px;
   color: @bluetooth;
 }
 
 #custom-system_update {
-  padding: 0 8px 0 2px;
+  padding: 0 10px 0 2px;
   color: @pacman;
 }
 
 #mpris {
-  padding: 0 12px;
+  padding: 0 10px 0 10px;
 }
 
 #pulseaudio,
 #wireplumber {
+  padding: 0 10px 0 2px;
 }
 
 #clock.time {
