@@ -27,20 +27,13 @@
   alias conf='cd ~/.config'
   alias lc='cd ~/.local'
 
-  alias conf_nvim='cd ~/.config/nvim'
-  alias conf_hypr='cd ~/.config/hypr'
-  alias conf_way='cd ~/.config/waybar'
-  alias conf_rofi='cd ~/.config/rofi'
+  alias currproj='cd ~/Documents/DotNetProjects/pizza-app'
 
   alias doc='cd ~/Documents'
   alias pic='cd ~/Pictures'
   alias dl='cd ~/Downloads'
 
-  alias proj_net='cd ~/Documents/DotNetProjects'
-
   alias sdtui='systemd-manager-tui'
-
-  alias restartdisc='pkill -f "electron.*equibop"; sleep 3; equibop &'
 
   # === Prompt ===
   eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.omp.json)"

@@ -4,15 +4,13 @@ return {
     formatters_by_ft = {
       cs = { "csharpier", "injected" },
       sql = { "sqlfluff" },
+      markdown = { "prettier" },
+      toml = { "tombi" },
     },
     formatters = {
       sqlfluff = {
         command = "sqlfluff",
         args = { "format", "--dialect=sqlite", "--config", vim.fn.expand("~/.sqlfluff"), "-" },
-        stdin = true,
-        cwd = function()
-          return vim.fn.getcwd()
-        end,
       },
       prettier = {
         prepend_args = { "--trailing-comma", "none" },

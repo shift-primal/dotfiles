@@ -14,6 +14,7 @@
     "~/.config/waybar/modules/network.jsonc",
     "~/.config/waybar/modules/bluetooth.jsonc",
     "~/.config/waybar/modules/custom/system_update.jsonc",
+    "~/.config/waybar/modules/custom/capslock.jsonc",
     "~/.config/waybar/modules/mpris.jsonc",
     "~/.config/waybar/modules/wireplumber.jsonc",
 
@@ -26,6 +27,7 @@
   "modules-center": ["custom/distro"],
 
   "modules-right": [
+    "custom/capslock",
     "custom/recording",
     "network",
     "bluetooth",

@@ -1,5 +1,17 @@
+#custom-capslock {
+  padding: 0 10px 0 6px;
+}
+
+#custom-capslock.on {
+  color: @orange;
+}
+
+#custom-capslock.off {
+  color: @comment;
+}
+
 #custom-recording {
-  padding: 0 10px 0 2px;
+  padding: 0 10px 0 12px;
 }
 
 #custom-recording.idle {
@@ -24,22 +36,22 @@
 }
 
 #network {
-  padding: 0 10px 0 2px;
+  padding: 0 10px 0 6px;
   color: @network;
 }
 
 #bluetooth {
-  padding: 0 10px 0 2px;
+  padding: 0 10px 0 6px;
   color: @bluetooth;
 }
 
 #custom-system_update {
-  padding: 0 10px 0 2px;
+  padding: 0 10px 0 6px;
   color: @pacman;
 }
 
 #mpris {
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0 12px;
 }
 
 #pulseaudio,
@@ -49,8 +61,6 @@
 
 #clock.time {
   padding-right: 6px;
-}
-#custom-right_div.3 {
 }
 
 #clock.date {
