@@ -4,9 +4,7 @@
     "rewrite": {
       "": "Desktop",
       "kitty": "Terminal",
-      "zsh": "Terminal",
-      "~ - fish": "Terminal",
-      "Files": "Files"
+      "zsh": "Terminal"
     },
     "icon": true,
     "max-length": 32,

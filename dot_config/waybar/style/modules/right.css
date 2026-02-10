@@ -1,0 +1,28 @@
+#custom-system-update {
+  color: @yellow;
+}
+
+#custom-capslock.off {
+  color: @comment;
+}
+
+#custom-capslock.on {
+  color: @yellow;
+}
+
+#custom-recording.idle {
+  color: @comment;
+}
+
+#custom-recording.recording {
+  color: @red;
+  animation: blink 1s ease-in-out infinite;
+}
+
+#network {
+  color: @green;
+}
+
+#bluetooth {
+  color: @cyan;
+}

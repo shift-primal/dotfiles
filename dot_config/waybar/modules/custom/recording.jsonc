@@ -1,10 +1,10 @@
 {
-	"custom/recording": {
-		"exec": "~/user_scripts/waybar/recording.sh",
-		"return-type": "json",
-		"interval": 1,
-		"on-click": "~/user_scripts/waybar/recording.sh toggle",
-		"on-click-right": "~/user_scripts/rofi/launch-screenshot-menu.sh",
-		"tooltip": true
-	}
+  "custom/recording": {
+    "exec": "~/user_scripts/waybar/recording.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/user_scripts/waybar/recording.sh toggle",
+    "on-click-right": "~/user_scripts/rofi/launch-screenshot-menu.sh",
+    "tooltip": true
+  }
 }

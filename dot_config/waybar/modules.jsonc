@@ -1,0 +1,41 @@
+{
+  "include": [
+    "./modules/battery.jsonc",
+    "./modules/bluetooth.jsonc",
+    "./modules/clock.jsonc",
+    "./modules/cpu.jsonc",
+    "./modules/date.jsonc",
+    "./modules/memory.jsonc",
+    "./modules/network.jsonc",
+    "./modules/temperature.jsonc",
+    "./modules/wireplumber.jsonc",
+
+    "./modules/custom/capslock.jsonc",
+    "./modules/custom/distro.jsonc",
+    "./modules/custom/system-update.jsonc",
+    "./modules/custom/recording.jsonc",
+
+    "./modules/hyprland/language.jsonc",
+    "./modules/hyprland/window.jsonc",
+    "./modules/hyprland/workspaces.jsonc"
+  ],
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "custom/capslock",
+    "custom/recording",
+    "custom/system-update",
+    "network",
+    "bluetooth",
+    "cpu",
+    "memory",
+    "temperature",
+    "wireplumber#input",
+    "wireplumber#output",
+    "hyprland/language",
+    "battery",
+    "battery#bat2",
+    "clock"
+  ]
+}

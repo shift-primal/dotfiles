@@ -1,71 +1,7 @@
 {
-	"clock#time": {
-		// "interval":
-		"format": "\uf017 {:%H:%M}",
-		// "timezone":
-		// "timezones":
-		// "locale":
-		"min-length": 5,
-		"max-length": 20,
-		// "rotate": 0,
-		// "on-click":
-		// "on-click-middle":
-		// "on-click-right":
-		// "on-scroll-up":
-		// "on-scroll-down":
-		// "smooth-scrolling-threshold":
-		// "tooltip":
-		"tooltip-format": "Standard Time: {:%I:%M %p}"
-		// "menu":
-		// "menu-file":
-		// "menu-actions":
-		// "expand":
-	},
-
-	/*--------------
-	    calendar
-	--------------*/
-
-	"clock#date": {
-		// "interval":
-		"format": "󰸗 {:L%a, %d. %b}",
-		// "timezone":
-		// "timezones":
-		// "locale":
-		"min-length": 8,
-		"max-length": 50,
-		// "rotate":
-		// "on-click":
-		// "on-click-middle":
-		// "on-click-right":
-		// "on-scroll-up":
-		// "on-scroll-down":
-		// "smooth-scrolling-threshold":
-		// "tooltip":
-		"tooltip-format": "{calendar}",
-		// "menu":
-		// "menu-file":
-		// "menu-actions":
-		// "expand":
-		"calendar": {
-			"mode": "month",
-			"mode-mon-col": 6,
-			// "week-pos":
-			// "on-scroll":
-			"format": {
-				"months": "<span alpha='100%'><b>{}</b></span>",
-				"days": "<span alpha='90%'>{}</span>",
-				// "weeks":
-				"weekdays": "<span alpha='80%'><i>{}</i></span>",
-				"today": "<span alpha='100%'><b><u>{}</u></b></span>"
-			}
-		},
-		"actions": {
-			"on-click": "mode"
-			// "on-click-middle":
-			// "on-click-right":
-			// "on-scroll-up":
-			// "on-scroll-down":
-		}
-	}
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%d.%m.%Y}"
+  }
 }

@@ -1,17 +1,15 @@
 return {
+
   "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
-      cs = { "csharpier", "injected" },
+      cs = { "csharpier" },
       sql = { "sqlfluff" },
-      markdown = { "prettier" },
       toml = { "tombi" },
+      fish = {},
+      ["*"] = { "injected" },
     },
     formatters = {
-      sqlfluff = {
-        command = "sqlfluff",
-        args = { "format", "--dialect=sqlite", "--config", vim.fn.expand("~/.sqlfluff"), "-" },
-      },
       prettier = {
         prepend_args = { "--trailing-comma", "none" },
       },
