@@ -41,6 +41,7 @@ window#waybar {
 #custom-capslock,
 #custom-recording,
 #custom-system-update,
+#custom-trigger,
 #custom-distro {
   padding: 0 10px;
   border-radius: 15px;
@@ -68,6 +69,7 @@ window#waybar {
 #custom-capslock:hover,
 #custom-recording:hover,
 #custom-system-update:hover,
+#custom-trigger:hover,
 #custom-distro:hover {
   background: @hover-fg;
 }

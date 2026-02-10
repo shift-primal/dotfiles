@@ -1,5 +1,5 @@
   # === Path ===
-  export PATH="$HOME/.local/bin:$HOME/.dotnet/tools:$PATH"
+  export PATH="$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/.cargo/bin:$PATH"
 
   # === Environment ===
   export EDITOR=nvim

@@ -26,3 +26,8 @@
 #bluetooth {
   color: @cyan;
 }
+
+#custom-trigger {
+  color: @red;
+  padding: 0 17.5px 0 10px;
+}
