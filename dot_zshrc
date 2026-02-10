@@ -28,6 +28,7 @@
   alias lc='cd ~/.local'
 
   alias currproj='cd ~/Documents/DotNetProjects/pizza-app'
+  alias gotocase='cd ~/Documents/case_oppgave_backend'
 
   alias doc='cd ~/Documents'
   alias pic='cd ~/Pictures'

@@ -1,8 +1,9 @@
 {
   "network": {
-    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-wifi": "",
     "format-ethernet": "󰈀",
     "tooltip-format": "{ifname} via {gwaddr}",
+    "tooltip-wifi": "{essid} ({signalStrength}%)",
     "format-linked": "{ifname} (No IP)",
     "format-disconnected": "Disconnected ⚠",
     "on-click": "kitty -e impala"
