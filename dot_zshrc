@@ -35,5 +35,8 @@
 
   alias sdtui='systemd-manager-tui'
 
+  alias updatechezmoi="~/user_scripts/etc/chezmoi-readd.sh"
+  alias hidedesktop="~/user_scripts/etc/hide_desktop_entries.sh"
+
   # === Prompt ===
   eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.omp.json)"
