@@ -60,4 +60,4 @@ parse_keybinds() {
 }
 
 # Show in rofi (no sort to preserve group order)
-parse_keybinds | rofi -dmenu -i -p "Keybindings" -theme-str 'window {width: 60%;}' -theme-str 'listview {columns: 1;}'
+parse_keybinds | rofi -dmenu -i -p "Keybindings" -theme-str 'listview {columns: 1;}'

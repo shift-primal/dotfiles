@@ -1,1 +1,1 @@
-rofi -show ssmenu -modi "ssmenu:~/user_scripts/rofi/menus/screenshot-menu.sh"
+rofi -show ssmenu -no-show-icons -modi "ssmenu:~/user_scripts/rofi/menus/screenshot-menu.sh"
