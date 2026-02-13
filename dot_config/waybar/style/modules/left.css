@@ -1,0 +1,18 @@
+#workspaces button {
+  border-radius: 16px;
+  min-width: 16px;
+  padding: 0 10px;
+}
+
+#workspaces button:hover {
+  background-color: @selection;
+  color: @selection;
+}
+
+#workspaces button label {
+  font-size: 20px;
+}
+
+#workspaces button.active label {
+  color: @red;
+}

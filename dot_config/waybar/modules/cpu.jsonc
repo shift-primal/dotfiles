@@ -1,0 +1,7 @@
+{
+  "cpu": {
+    "format": "{icon}  {usage}%",
+    "format-icons": "",
+    "tooltip": true
+  }
+}

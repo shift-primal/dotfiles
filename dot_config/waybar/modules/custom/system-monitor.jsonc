@@ -1,0 +1,22 @@
+{
+  "include": [
+    "./modules/cpu.jsonc",
+    "./modules/memory.jsonc",
+    "./modules/temperature.jsonc"
+  ],
+
+  "group/system-monitor": {
+    "orientation": "horizontal",
+    "modules": ["custom/trigger", "cpu", "memory", "temperature"],
+
+    "drawer": {
+      "transition-left-to-right": false,
+      "click-to-reveal": true
+    }
+  },
+
+  "custom/trigger": {
+    "format": "",
+    "tooltip": false
+  }
+}
