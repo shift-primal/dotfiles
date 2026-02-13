@@ -1,0 +1,7 @@
+[flavor]
+dark = "rose-pine"
+
+[icon]
+prepend_conds = [
+  { if = "dir", text = "󰉋" },
+]
