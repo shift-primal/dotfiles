@@ -33,12 +33,13 @@ configuration {
     border-color:     @bordercolor;
     padding:          20;
     width: 25%;
-
+    location: center;
+    anchor: center;
 }
 
 #mainbox {
     border:  0;
-    padding: 10;
+    padding: 6;
 }
 
 #message {
@@ -53,16 +54,16 @@ configuration {
     columns: 1;
     border:       0;
     border-color: @bordercolor;
-    spacing:      8px;
+    spacing:      2px;
     scrollbar:    false;
-    padding:      10px;
+    padding:      2px;
     dynamic:      true;
     lines:        12;
 }
 
 #element {
     border:  0;
-    padding: 12px;
+    padding: 4px 8px;
     border-radius: 4px;
 }
 #element.normal.normal {
@@ -134,7 +135,7 @@ configuration {
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 8px 0px;
 }
 #textbox-prompt-colon {
     expand:     false;
@@ -150,4 +151,8 @@ element-icon {
 element-text, element-icon {
     background-color: inherit;
     text-color: inherit;
+}
+
+element-text selected {
+    text-color: #ffffff;
 }
