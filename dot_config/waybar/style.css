@@ -1,7 +1,0 @@
-* {
-  all: initial;
-}
-
-@import "./style/theme.css";
-@import "./style/globals.css";
-@import "./style/modules.css";
