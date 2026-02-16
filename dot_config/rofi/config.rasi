@@ -7,10 +7,10 @@ configuration {
 
 * {
     font: "0xProto Nerd Font Mono 14";
-    foreground: #e0def4;
-    background-color: #191724;
-    active-background: #eb6f92;
-    urgent-background: #eb6f92;
+    foreground: #cdd6f4;
+    background-color: #1e1e2e;
+    active-background: #89b4fa;
+    urgent-background: #89b4fa;
     urgent-foreground: #191724;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
