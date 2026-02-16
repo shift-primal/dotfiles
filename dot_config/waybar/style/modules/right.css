@@ -7,7 +7,7 @@
 }
 
 #custom-capslock.on {
-  color: @yellow;
+  color: @green;
 }
 
 #custom-recording.idle {
@@ -24,10 +24,14 @@
 }
 
 #bluetooth {
-  color: @cyan;
+  color: @blue;
 }
 
-#custom-trigger {
-  color: @red;
-  padding: 0 15px 0 10px;
+#custom-volume-trigger {
+  color: @purple;
 }
+
+#custom-system-trigger {
+  color: @red;
+}
+

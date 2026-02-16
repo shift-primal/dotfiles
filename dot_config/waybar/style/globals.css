@@ -1,14 +1,12 @@
 * {
-  font-family: "0xProto Nerd Font";
+  font-family: "0xProto Nerd Font Propo";
   font-weight: bold;
   font-size: 16px;
-  transition: background-color 0.3s ease-out;
   color: @foreground;
 }
 
 window#waybar {
-  background-color: alpha(@background, 0.5);
-  transition: background-color 0.5s;
+  background-color: alpha(@background, 0.65);
 }
 
 .modules-left,
@@ -40,9 +38,10 @@ window#waybar {
 #custom-capslock,
 #custom-recording,
 #custom-system-update,
-#custom-trigger,
+#custom-system-trigger,
+#custom-volume-trigger,
 #custom-distro {
-  padding: 0 10px;
+  padding: 0 12px;
   border: none;
   border-radius: 16px;
 }
@@ -69,7 +68,8 @@ window#waybar {
 #custom-capslock:hover,
 #custom-recording:hover,
 #custom-system-update:hover,
-#custom-trigger:hover,
+#custom-system-trigger:hover,
+#custom-volume-trigger:hover,
 #custom-distro:hover {
   background: @hover-fg;
 }

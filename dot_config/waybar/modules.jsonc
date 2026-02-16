@@ -5,15 +5,13 @@
     "./modules/clock.jsonc",
     "./modules/date.jsonc",
     "./modules/network.jsonc",
-    "./modules/wireplumber.jsonc",
 
     "./modules/custom/capslock.jsonc",
     "./modules/custom/distro.jsonc",
-    "./modules/custom/system-monitor.jsonc",
-    "./modules/custom/system-update.jsonc",
+    "./modules/custom/drawers.jsonc",
     "./modules/custom/recording.jsonc",
+    "./modules/custom/system-update.jsonc",
 
-    "./modules/hyprland/language.jsonc",
     "./modules/hyprland/window.jsonc",
     "./modules/hyprland/workspaces.jsonc"
   ],
@@ -23,13 +21,11 @@
   "modules-right": [
     "custom/capslock",
     "custom/recording",
+    "group/volume",
+    "group/system-monitor",
     "custom/system-update",
     "network",
     "bluetooth",
-    "group/system-monitor",
-    "wireplumber#input",
-    "wireplumber#output",
-    "hyprland/language",
     "battery",
     "battery#bat2",
     "clock"
