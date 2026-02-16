@@ -20,6 +20,7 @@
 
   # === Aliases ===
   alias ff='fastfetch'
+  alias py='python'
 
   alias fixmon='for m in $(hyprctl monitors -j | jq -r ".[].name"); do hyprctl keyword monitor "$m,disable";
    done && sleep 0.5 && hyprctl reload'
