@@ -8,7 +8,6 @@
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.ui.indent-blankline",
     "lazyvim.plugins.extras.ui.mini-indentscope",
-    "lazyvim.plugins.extras.ui.smear-cursor",
     "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "install_version": 8,
