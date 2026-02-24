@@ -1,8 +1,8 @@
 {
   "wireplumber#output": {
-    "format": "{icon} {volume}%",
-    "format-muted": " {volume}%",
-    "format-icons": ["", "", ""],
+    "format": "<span color='#a6e3a1'>{icon}</span> {volume}%",
+    "format-muted": "<span color='#a6adc8'>󰝟</span> {volume}%",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
     "min-length": 7,
     "max-length": 7,
     "on-click": "~/user_scripts/hyprland/volume.sh mute",
@@ -14,8 +14,8 @@
   },
 
   "wireplumber#input": {
-    "format": " {volume}%",
-    "format-muted": " {volume}%",
+    "format": "<span color='#f38ba8'>󰍬</span> {volume}%",
+    "format-muted": "<span color='#a6adc8'>󰍭</span> {volume}%",
     "min-length": 7,
     "max-length": 7,
     "on-click": "~/user_scripts/hyprland/microphone.sh mute",

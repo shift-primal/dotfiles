@@ -28,10 +28,9 @@
 }
 
 #custom-volume-trigger {
-  color: @purple;
+  color: @white;
 }
 
 #custom-system-trigger {
   color: @red;
 }
-

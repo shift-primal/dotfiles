@@ -1,0 +1,43 @@
+local H = "plugins.ui.highlights"
+
+return function(c)
+  local t = require(H .. ".tokens")(c)
+  return {
+    Comment      = { fg = t.comment, style = { "italic" } },
+    SpecialComment = { link = "Special" },
+    Constant     = { fg = t.constant },
+    String       = { fg = t.string },
+    Character    = { fg = t.string },
+    Number       = { fg = t.number },
+    Float        = { link = "Number" },
+    Boolean      = { fg = t.boolean },
+    Identifier   = { fg = t.variable },
+    Function     = { fg = t.func },
+    Statement    = { fg = t.keyword },
+    Conditional  = { fg = t.keyword },
+    Repeat       = { fg = t.keyword },
+    Label        = { fg = t.keyword },
+    Operator     = { fg = t.operator },
+    Keyword      = { fg = t.keyword },
+    Exception    = { fg = t.keyword },
+    PreProc      = { fg = t.keyword },
+    Include      = { fg = t.keyword },
+    Define       = { link = "PreProc" },
+    Macro        = { fg = t.keyword },
+    PreCondit    = { link = "PreProc" },
+    StorageClass = { fg = t.keyword },
+    Structure    = { fg = t.type },
+    Special      = { fg = t.special },
+    Type         = { fg = t.type },
+    Typedef      = { link = "Type" },
+    SpecialChar  = { link = "Special" },
+    Tag          = { fg = t.tag },
+    Delimiter    = { fg = t.delimiter },
+    Debug        = { link = "Special" },
+    Underlined   = { style = { "underline" } },
+    Bold         = { style = { "bold" } },
+    Italic       = { style = { "italic" } },
+    Error        = { fg = t.error },
+    Todo         = { bg = c.flamingo, fg = c.base, style = { "bold" } },
+  }
+end

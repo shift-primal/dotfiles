@@ -10,8 +10,8 @@ configuration {
     foreground: #cdd6f4;
     background-color: #1e1e2e;
     active-background: #89b4fa;
-    urgent-background: #89b4fa;
-    urgent-foreground: #191724;
+    urgent-background: #f9e2af;
+    urgent-foreground: #cdd6f4;
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;

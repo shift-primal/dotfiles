@@ -9,6 +9,7 @@
     "./modules/custom/capslock.jsonc",
     "./modules/custom/distro.jsonc",
     "./modules/custom/drawers.jsonc",
+    "./modules/custom/music.jsonc",
     "./modules/custom/recording.jsonc",
     "./modules/custom/system-update.jsonc",
 
@@ -21,6 +22,7 @@
   "modules-right": [
     "custom/capslock",
     "custom/recording",
+    "custom/music",
     "group/volume",
     "group/system-monitor",
     "custom/system-update",
