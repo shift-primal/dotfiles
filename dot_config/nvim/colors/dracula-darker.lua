@@ -9,6 +9,7 @@ vim.g.colors_name = "dracula-darker"
 
 local c = {
   -- Base
+<<<<<<< HEAD
   bg        = "#1e1e2e",
   fg        = "#cdd6f4",
   cursor    = "#bac2de",
@@ -48,6 +49,47 @@ local c = {
   diff_change = "#38353d",
   diff_delete = "#373144",
   diff_text   = "#4e494a",
+=======
+  bg        = "#141423",
+  fg        = "#E9E9F4",
+  cursor    = "#373760",
+  cursor_fg = "#F7F7FB",
+
+  -- Syntax roles (mapped from terminal palette)
+  purple    = "#FF5555",    -- c1: types, classes
+  yellow    = "#20E3B2",    -- c2: strings, attributes
+  cyan_dim  = "#FDE181",    -- c3: numbers, booleans
+  green     = "#BD93F9",    -- c4: functions, methods
+  pink      = "#FF6BCB",    -- c5: keywords, operators (accent)
+  cyan      = "#8BE9FD",    -- c6: constants, builtins
+  muted     = "#7e7eb5",  -- comments, line numbers
+  bright_fg = "#F1F2F8",  -- bright foreground
+
+  -- UI chrome (derived from palette)
+  bg_dark       = "#11111e",
+  bg_float      = "#262644",
+  bg_visual     = "#37213c",
+  bg_cursorline = "#22233d",
+  border        = "#8D92FF",
+  selection     = "#505391",
+
+  -- Diagnostics
+  error = "#ff5555",
+  warn  = "#20E3B2",
+  info  = "#FDE181",
+  hint  = "#BD93F9",
+
+  -- Git
+  git_add    = "#BD93F9",
+  git_change = "#FDE181",
+  git_delete = "#ff5555",
+
+  -- Diff (tinted backgrounds)
+  diff_add    = "#28233c",
+  diff_change = "#2f2c2e",
+  diff_delete = "#301e37",
+  diff_text   = "#474137",
+>>>>>>> work
 
   none = "NONE",
 }
@@ -359,6 +401,7 @@ hl("NotifyWARNTitle",            { fg = c.warn,  bold = true })
 hl("NotifyINFOTitle",            { fg = c.info,  bold = true })
 
 -- ─── Terminal ─────────────────────────────────────────────────────────────────
+<<<<<<< HEAD
 vim.g.terminal_color_0  = "#45475a"
 vim.g.terminal_color_1  = "#f38ba8"
 vim.g.terminal_color_2  = "#a6e3a1"
@@ -375,3 +418,21 @@ vim.g.terminal_color_12 = "#89b4fa"
 vim.g.terminal_color_13 = "#f5c2e7"
 vim.g.terminal_color_14 = "#94e2d5"
 vim.g.terminal_color_15 = "#a6adc8"
+=======
+vim.g.terminal_color_0  = "#141423"
+vim.g.terminal_color_1  = "#FF5555"
+vim.g.terminal_color_2  = "#20E3B2"
+vim.g.terminal_color_3  = "#FDE181"
+vim.g.terminal_color_4  = "#BD93F9"
+vim.g.terminal_color_5  = "#FF6BCB"
+vim.g.terminal_color_6  = "#8BE9FD"
+vim.g.terminal_color_7  = "#E9E9F4"
+vim.g.terminal_color_8  = "#8D92FF"
+vim.g.terminal_color_9  = "#FF6E6E"
+vim.g.terminal_color_10 = "#20E3B2"
+vim.g.terminal_color_11 = "#EAC394"
+vim.g.terminal_color_12 = "#BD93F9"
+vim.g.terminal_color_13 = "#FF6BCB"
+vim.g.terminal_color_14 = "#2CCCFF"
+vim.g.terminal_color_15 = "#F1F2F8"
+>>>>>>> work
