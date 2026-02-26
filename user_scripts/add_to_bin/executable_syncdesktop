@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SOURCE_DIR="/usr/share/applications"
+DEST_DIR="${HOME}/.local/share/applications"
+
+mkdir -p "$DEST_DIR"
+
+copied=0
+updated=0
+skipped=0
+
+while IFS= read -r -d '' file; do
+  filename=$(basename "$file")
+  dest_file="${DEST_DIR}/${filename}"
+
+  if [[ -f "$dest_file" ]]; then
+    if [[ "$file" -nt "$dest_file" ]]; then
+      cp -f "$file" "$dest_file"
+      ((updated++))
+    else
+      ((skipped++))
+    fi
+  else
+    cp "$file" "$dest_file"
+    ((copied++))
+  fi
+done < <(find "$SOURCE_DIR" -maxdepth 1 -type f -name "*.desktop" -print0) || true
+
+if [[ $copied -gt 0 ]] || [[ $updated -gt 0 ]]; then
+  echo "Desktop files synced: $copied new, $updated updated, $skipped unchanged"
+fi

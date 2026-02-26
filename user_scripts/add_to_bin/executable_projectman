@@ -1,0 +1,41 @@
+#!/bin/bash
+
+set -euo pipefail
+
+DIR=~/Documents/OtherProjects/expenses_tracker
+
+is_open() {
+  hyprctl clients -j | grep -q "\"class\": \"$1\""
+}
+
+open_nvim() {
+  is_open "nvim-main" && return
+  kitty --detach --class "nvim-main" --working-directory=$DIR sh -c "nvim --listen $NVIM_SOCKET ."
+}
+
+open_plan_claude() {
+  is_open "plan-md" || kitty --detach --class "plan-md" --working-directory=$DIR sh -c "nvim plan.md"
+  is_open "claude-cc" || kitty --detach --class "claude-cc" --working-directory=$DIR sh -c "claude -c"
+}
+
+open_servers() {
+  is_open "dev-servers" && return
+  kitty --detach --class "dev-servers" --session ~/.config/kitty/expenses-dev.conf
+}
+
+open_browser() {
+  is_open "firefox-dev" && return
+  (firefox --name=firefox-dev "http://localhost:5173") &
+}
+
+case "$1" in
+-e) open_nvim ;;
+-s) open_servers ;;
+-b) open_browser ;;
+*)
+  open_nvim
+  open_plan_claude
+  open_servers
+  open_browser
+  ;;
+esac
