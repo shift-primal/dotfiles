@@ -1,0 +1,28 @@
+require("nvim-treesitter").setup {
+  ensure_installed = {
+    "lua",
+    "luadoc",
+    "vim",
+    "vimdoc",
+    "markdown",
+    "bash",
+    "javascript",
+    "typescript",
+    "tsx",
+    "html",
+    "css",
+    "json",
+    "jsonc",
+    "c_sharp",
+    "yaml",
+    "toml",
+    "regex",
+    "gitignore",
+  },
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+  },
+  indent = { enable = true },
+  autotag = { enable = true },
+}
