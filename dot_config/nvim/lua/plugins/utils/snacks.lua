@@ -1,5 +1,20 @@
 return {
   "folke/snacks.nvim",
+  opts = {
+    picker = {
+      sources = {
+        explorer = {
+          win = {
+            list = {
+              wo = {
+                winhighlight = "Normal:Normal,NormalNC:NormalNC,SignColumn:Normal",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
   keys = {
     {
       "<leader>ø",

@@ -14,10 +14,5 @@ return {
       html = { "prettier" },
       json = { "prettier" },
     },
-    formatters = {
-      prettier = {
-        prepend_args = { "--trailing-comma", "none", "--tab-width", "2" },
-      },
-    },
   },
 }
