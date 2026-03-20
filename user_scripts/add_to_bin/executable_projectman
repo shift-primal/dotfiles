@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-DIR=~/Documents/OtherProjects/expenses_tracker
+DIR=~/Documents/OtherProjects/todo-app-fullstack
 
 is_open() {
   hyprctl clients -j | grep -q "\"class\": \"$1\""
@@ -14,18 +14,22 @@ open_nvim() {
 }
 
 open_plan_claude() {
-  is_open "plan-md" || kitty --detach --class "plan-md" --working-directory=$DIR sh -c "nvim plan.md"
   is_open "claude-cc" || kitty --detach --class "claude-cc" --working-directory=$DIR sh -c "claude -c"
+}
+
+open_docker() {
+  cd "$DIR"
+  sudo docker-compose start
 }
 
 open_servers() {
   is_open "dev-servers" && return
-  kitty --detach --class "dev-servers" --session ~/.config/kitty/expenses-dev.conf
+  kitty --detach --class "dev-servers" --session ~/.config/kitty/todo-dev.conf
 }
 
 open_browser() {
   is_open "firefox-dev" && return
-  (firefox --name=firefox-dev "http://localhost:5173") &
+  (firefox --name=firefox-dev "http://localhost:3000") &
 }
 
 case "$1" in

@@ -1,1 +1,0 @@
-return { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = { transparent_background = true, default_integrations = true, auto_integrations = true, float = { transparent = true, solid = false } } }

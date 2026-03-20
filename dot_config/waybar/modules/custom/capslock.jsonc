@@ -1,8 +1,8 @@
 {
-  "custom/capslock": {
-    "exec": "~/user_scripts/waybar/capslock.sh",
-    "return-type": "json",
-    "interval": 0.5,
-    "tooltip": true
-  }
+    "custom/capslock": {
+        "exec": "~/user_scripts/waybar/capslock.sh",
+        "return-type": "json",
+        "interval": 0.5,
+        "tooltip": true
+    }
 }

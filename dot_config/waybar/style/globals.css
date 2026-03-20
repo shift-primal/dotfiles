@@ -1,19 +1,19 @@
 * {
-  font-family: "0xProto Nerd Font Propo";
-  font-weight: bold;
-  font-size: 16px;
-  color: @foreground;
+    font-family: '0xProto Nerd Font Propo';
+    font-weight: bold;
+    font-size: 16px;
+    color: @foreground;
 }
 
 window#waybar {
-  background-color: alpha(@background, 0.65);
+    background-color: alpha(@background, 0.65);
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  margin: 5px 10px;
-  padding: 5px;
+    margin: 5px 10px;
+    padding: 5px;
 }
 
 #clock,
@@ -42,9 +42,9 @@ window#waybar {
 #custom-volume-trigger,
 #custom-distro,
 #custom-music {
-  padding: 0 12px;
-  border: none;
-  border-radius: 16px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 16px;
 }
 
 #clock:hover,
@@ -73,14 +73,14 @@ window#waybar {
 #custom-volume-trigger:hover,
 #custom-distro:hover,
 #custom-music:hover {
-  background: @hover-fg;
+    background: @hover-fg;
 }
 
 tooltip {
-  border: 2px solid @background;
-  border-radius: 10px;
-  background-color: @background;
+    border: 2px solid @background;
+    border-radius: 10px;
+    background-color: @background;
 }
 tooltip > box {
-  padding: 0 6px;
+    padding: 0 6px;
 }

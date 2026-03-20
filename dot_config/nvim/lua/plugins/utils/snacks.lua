@@ -1,20 +1,6 @@
 return {
   "folke/snacks.nvim",
-  opts = {
-    picker = {
-      sources = {
-        explorer = {
-          win = {
-            list = {
-              wo = {
-                winhighlight = "Normal:Normal,NormalNC:NormalNC,SignColumn:Normal",
-              },
-            },
-          },
-        },
-      },
-    },
-  },
+  opts = {},
   keys = {
     {
       "<leader>ø",
@@ -24,7 +10,7 @@ return {
       desc = "Toggle Scratch Buffer",
     },
     {
-      "<leader>S",
+      "<leader>.",
       function()
         Snacks.scratch.select()
       end,

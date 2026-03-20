@@ -28,6 +28,7 @@ return {
       tailwindcss = require("plugins.lsp.servers.tailwindcss"),
       marksman = require("plugins.lsp.servers.marksman"),
       docker_compose_language_service = require("plugins.lsp.servers.docker"),
+      -- denols = require("plugins.lsp.servers.denols"),
     },
   },
 }

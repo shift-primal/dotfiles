@@ -1,5 +1,5 @@
 {
-  "date": {
-    "format": "{%e. %B}"
-  }
+    "date": {
+        "format": "{%e. %B}"
+    }
 }

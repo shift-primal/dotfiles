@@ -1,7 +1,7 @@
 {
-  "cpu": {
-    "format": "<span color='#89b4fa'>{icon}</span>  {usage}%",
-    "format-icons": "",
-    "tooltip": true
-  }
+    "cpu": {
+        "format": "<span color='#89b4fa'>{icon}</span>  {usage}%",
+        "format-icons": "",
+        "tooltip": true
+    }
 }

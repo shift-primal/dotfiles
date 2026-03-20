@@ -1,34 +1,34 @@
 {
-  "include": [
-    "./modules/battery.jsonc",
-    "./modules/bluetooth.jsonc",
-    "./modules/clock.jsonc",
-    "./modules/date.jsonc",
-    "./modules/network.jsonc",
+    "include": [
+        "./modules/battery.jsonc",
+        "./modules/bluetooth.jsonc",
+        "./modules/clock.jsonc",
+        "./modules/date.jsonc",
+        "./modules/network.jsonc",
 
-    "./modules/custom/capslock.jsonc",
-    "./modules/custom/distro.jsonc",
-    "./modules/custom/drawers.jsonc",
-    "./modules/custom/recording.jsonc",
-    "./modules/custom/system-update.jsonc",
+        "./modules/custom/capslock.jsonc",
+        "./modules/custom/distro.jsonc",
+        "./modules/custom/drawers.jsonc",
+        "./modules/custom/recording.jsonc",
+        "./modules/custom/system-update.jsonc",
 
-    "./modules/hyprland/window.jsonc",
-    "./modules/hyprland/workspaces.jsonc"
-  ],
+        "./modules/hyprland/window.jsonc",
+        "./modules/hyprland/workspaces.jsonc"
+    ],
 
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": [
-    "custom/capslock",
-    "custom/recording",
-    "custom/music",
-    "group/volume",
-    "group/system-monitor",
-    "custom/system-update",
-    "network",
-    "bluetooth",
-    "battery",
-    "battery#bat2",
-    "clock"
-  ]
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+        "custom/capslock",
+        "custom/recording",
+        "custom/music",
+        "group/volume",
+        "group/system-monitor",
+        "custom/system-update",
+        "network",
+        "bluetooth",
+        "battery",
+        "battery#bat2",
+        "clock"
+    ]
 }

@@ -1,8 +1,8 @@
 {
-  "hyprland/language": {
-    "format": "  {}",
-    "format-en": "EN",
-    "format-ru": "RU",
-    "format-no": "NO"
-  }
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "EN",
+        "format-ru": "RU",
+        "format-no": "NO"
+    }
 }

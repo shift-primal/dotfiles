@@ -1,36 +1,36 @@
 #custom-system-update {
-  color: @yellow;
+    color: @yellow;
 }
 
 #custom-capslock.off {
-  color: @comment;
+    color: @comment;
 }
 
 #custom-capslock.on {
-  color: @green;
+    color: @green;
 }
 
 #custom-recording.idle {
-  color: @comment;
+    color: @comment;
 }
 
 #custom-recording.recording {
-  color: @red;
-  animation: blink 1s ease-in-out infinite;
+    color: @red;
+    animation: blink 1s ease-in-out infinite;
 }
 
 #network {
-  color: @green;
+    color: @green;
 }
 
 #bluetooth {
-  color: @blue;
+    color: @blue;
 }
 
 #custom-volume-trigger {
-  color: @white;
+    color: @white;
 }
 
 #custom-system-trigger {
-  color: @red;
+    color: @red;
 }
