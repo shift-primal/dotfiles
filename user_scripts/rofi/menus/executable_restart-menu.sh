@@ -4,31 +4,37 @@ set -euo pipefail
 
 declare -Ar ICONS=(
 	[waybar]=""
+	[sddm]="󰍹"
 	[cancel]="󰜺"
 	[confirm]=""
 )
 
 declare -Ar MENU=(
 	[waybar]="${ICONS[waybar]}  Waybar"
-
+	[sddm]="${ICONS[sddm]}  SDDM"
 )
 
-declare -ar ORDER=(waybar)
+declare -ar ORDER=(waybar sddm)
 
-declare -Ar CONFIRM=([waybar]=1)
+declare -Ar CONFIRM=([waybar]=1 [sddm]=1)
 
 execute() {
 	case $1 in
 	waybar)
-		setsid killall waybar && sleep 1 && waybar &>/dev/null 9>&- &
+		setsid sh -c 'killall waybar && waybar &
+		disown' &>/dev/null 9>&- &
+		;;
+	sddm)
+		setsid sh -c 'sudo systemctl restart sddm' &>/dev/null 9>&- &
 		;;
 	esac
+
 }
 
 IFS=: read -r key state <<<"${ROFI_INFO:-}"
 
 if [[ -z ${key:-} ]]; then
-	printf '\0prompt\x1f󰐥 Power\n'
+	printf '\0prompt\x1f󰜉 Restart\n'
 	printf '\0no-custom\x1ftrue\n'
 	for k in "${ORDER[@]}"; do
 		printf '%s\0info\x1f%s\n' "${MENU[$k]}" "$k"

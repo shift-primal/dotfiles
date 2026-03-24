@@ -2,12 +2,14 @@
     color: @yellow;
 }
 
-#custom-capslock.off {
-    color: @comment;
+#custom-capslock.on,
+#custom-numlock.on {
+    color: @green;
 }
 
-#custom-capslock.on {
-    color: @green;
+#custom-capslock.off,
+#custom-numlock.off {
+    color: @comment;
 }
 
 #custom-recording.idle {

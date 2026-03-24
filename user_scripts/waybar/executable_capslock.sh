@@ -1,14 +1,15 @@
 #!/bin/bash
 
-LED_PATH="/sys/class/leds/input13::capslock/brightness"
-
-if [[ -f "$LED_PATH" ]]; then
-    state=$(cat "$LED_PATH")
-    if [[ "$state" == "1" ]]; then
-        echo '{"text": "󰪛", "tooltip": "Caps Lock: ON", "class": "on"}'
-    else
-        echo '{"text": "󰪛", "tooltip": "Caps Lock: OFF", "class": "off"}'
+for path in /sys/class/leds/*"::capslock"; do
+    if [[ -f "${path}/brightness" ]]; then
+        state=$(cat "${path}/brightness")
+        if [[ "$state" == "1" ]]; then
+            echo '{"text": "󰪛", "tooltip": "Caps Lock: ON", "class": "on"}'
+        else
+            echo '{"text": "󰪛", "tooltip": "Caps Lock: OFF", "class": "off"}'
+        fi
+        exit 0
     fi
-else
-    echo '{"text": "󰪛", "tooltip": "Caps Lock LED not found", "class": "off"}'
-fi
+done
+
+echo '{"text": "󰪛", "tooltip": "Caps Lock LED not found", "class": "off"}'

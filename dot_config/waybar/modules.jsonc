@@ -6,7 +6,7 @@
         "./modules/date.jsonc",
         "./modules/network.jsonc",
 
-        "./modules/custom/capslock.jsonc",
+        "./modules/custom/kb_toggles.jsonc",
         "./modules/custom/distro.jsonc",
         "./modules/custom/drawers.jsonc",
         "./modules/custom/recording.jsonc",
@@ -20,8 +20,8 @@
     "modules-center": ["hyprland/window"],
     "modules-right": [
         "custom/capslock",
+        "custom/numlock",
         "custom/recording",
-        "custom/music",
         "group/volume",
         "group/system-monitor",
         "custom/system-update",

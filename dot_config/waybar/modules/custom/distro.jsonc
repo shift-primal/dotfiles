@@ -1,8 +1,0 @@
-{
-    "custom/distro": {
-        "format": "󰣇",
-        "tooltip": true,
-        "tooltip-format": "btw",
-        "on-click": "kitty -e btop"
-    }
-}

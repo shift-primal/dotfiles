@@ -5,6 +5,7 @@
     color: @foreground;
 }
 
+
 window#waybar {
     background-color: alpha(@background, 0.65);
 }
@@ -36,6 +37,7 @@ window#waybar {
 #language,
 #mpd,
 #custom-capslock,
+#custom-numlock,
 #custom-recording,
 #custom-system-update,
 #custom-system-trigger,
@@ -67,6 +69,7 @@ window#waybar {
 #language:hover,
 #mpd:hover,
 #custom-capslock:hover,
+#custom-numlock:hover,
 #custom-recording:hover,
 #custom-system-update:hover,
 #custom-system-trigger:hover,

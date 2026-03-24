@@ -4,5 +4,11 @@
         "return-type": "json",
         "interval": 0.5,
         "tooltip": true
+    },
+    "custom/numlock": {
+        "exec": "~/user_scripts/waybar/numlock.sh",
+        "return-type": "json",
+        "interval": 0.5,
+        "tooltip": true
     }
 }
