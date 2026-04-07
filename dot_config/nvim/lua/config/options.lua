@@ -10,3 +10,10 @@ vim.opt.softtabstop = 0
 
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+vim.filetype.add({
+  extension = {
+    todo = "markdown",
+  },
+})
+

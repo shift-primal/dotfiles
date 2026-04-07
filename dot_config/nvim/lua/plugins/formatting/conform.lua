@@ -13,11 +13,16 @@ return {
 			css = { "prettier" },
 			html = { "prettier" },
 			json = { "prettier" },
+			cpp = { "clang_format" },
+			arduino = { "clang_format" },
 		})
 
 		opts.formatters = vim.tbl_extend("force", opts.formatter or {}, {
 			stylua = {
 				prepend_args = { "--indent-type", "Tabs", "--indent-width", "4" },
+			},
+			clang_format = {
+				prepend_args = { "--style=file" },
 			},
 		})
 	end,
