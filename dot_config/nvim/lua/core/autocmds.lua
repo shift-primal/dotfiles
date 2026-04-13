@@ -114,11 +114,12 @@ vim.api.nvim_create_autocmd('FileType', {
 	end,
 })
 
--- Ensure the module (keymaps, commands) is active for every arduino buffer.
+-- Bootstrap the Arduino integration for every .ino buffer.
 vim.api.nvim_create_autocmd('FileType', {
+	group = augroup('arduino_setup'),
 	pattern = 'arduino',
 	callback = function()
-		require('Arduino-Nvim') -- cached after first load, no-op subsequently
+		require('arduino').setup()
 		vim.opt_local.shiftwidth = 4
 		vim.opt_local.tabstop = 4
 		vim.opt_local.expandtab = true

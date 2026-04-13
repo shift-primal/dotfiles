@@ -38,6 +38,9 @@ vim.pack.add({
 	gh('windwp/nvim-autopairs'),
 	gh('windwp/nvim-ts-autotag'),
 	gh('cappyzawa/trim.nvim'),
+	gh('lewis6991/gitsigns.nvim'),
+	gh('MagicDuck/grug-far.nvim'),
+	gh('folke/flash.nvim'),
 
 	-- Diagnostics
 	gh('rachartier/tiny-inline-diagnostic.nvim'),
@@ -47,7 +50,6 @@ vim.pack.add({
 	gh('OXY2DEV/markview.nvim'),
 	gh('nvim-lualine/lualine.nvim'),
 	gh('folke/which-key.nvim'),
-	gh('lewis6991/gitsigns.nvim'),
 	gh('nvim-tree/nvim-web-devicons'),
 	gh('goolord/alpha-nvim'),
 	gh('folke/noice.nvim'),
@@ -57,6 +59,7 @@ vim.pack.add({
 
 	-- Utils
 	gh('vyfor/cord.nvim'),
+	gh('bngarren/checkmate.nvim'),
 })
 
 local function load(mod)
@@ -66,6 +69,7 @@ local function load(mod)
 	end
 end
 
+load('plugins.lsp')
 load('plugins.ui')
 load('plugins.conform')
 load('plugins.treesitter')

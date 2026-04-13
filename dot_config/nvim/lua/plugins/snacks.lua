@@ -1,10 +1,10 @@
 require('snacks').setup({
-	indent = {
-		terminal = {
-			win = { style = 'terminal' },
-		},
+	indent = { enabled = true },
+	terminal = {
+		win = { style = 'terminal' },
 	},
 	explorer = {},
+	picker = { enabled = true },
 	notifier = { enabled = true },
 	statuscolumn = { enabled = true },
 	words = { enabled = true },

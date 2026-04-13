@@ -13,10 +13,15 @@ require('which-key').add({
 	{ '<leader>w', group = 'Window' },
 	{ '<leader>x', group = 'Quickfix' },
 	{ '<leader><tab>', group = 'Tabs' },
-	{ '<leader>D', group = 'Database' },
 	{ '<leader>a', group = 'Arduino' },
 	{ '<leader>T', group = 'Checkmate' },
 })
 
 -- Discord Rich Presence
 require('cord').setup()
+
+-- Pretty markdown viewer
+require('markview').setup()
+
+-- Checklist / TODO
+require('checkmate').setup()

@@ -30,6 +30,8 @@ require('noice').setup({
 			['vim.lsp.util.convert_input_to_markdown_lines'] = true,
 			['vim.lsp.util.stylize_markdown'] = true,
 		},
+		-- blink.cmp handles signature help; disable noice's duplicate
+		signature = { enabled = false },
 	},
 	presets = {
 		bottom_search = true,
@@ -70,7 +72,7 @@ require('bufferline').setup({
 				.. (diag.warning and icons.warning .. diag.warning or '')
 		end,
 		offsets = {
-			{ filetype = 'NvimTree', text = 'Files', highlight = 'Directory', padding = 1 },
+			{ filetype = 'snacks_layout_box' },
 		},
 		separator_style = 'slant',
 	},

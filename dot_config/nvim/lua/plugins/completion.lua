@@ -17,18 +17,6 @@ require('blink.cmp').setup({
 			'score',
 			'sort_text',
 		},
-
-		prebuilt_binaries = {
-			download = true,
-			ignore_version_mismatch = false,
-			force_version = nil,
-			force_system_triple = nil,
-			extra_curl_args = {},
-			proxy = {
-				from_env = true,
-				url = nil,
-			},
-		},
 	},
 
 	appearance = {
@@ -55,7 +43,7 @@ require('blink.cmp').setup({
 			auto_show_delay_ms = 200,
 		},
 		ghost_text = {
-			enabled = vim.g.ai_cmp,
+			enabled = true,
 		},
 	},
 
@@ -74,7 +62,7 @@ require('blink.cmp').setup({
 		completion = {
 			list = { selection = { preselect = false } },
 			menu = {
-				auto_show = function(ctx)
+				auto_show = function()
 					return vim.fn.getcmdtype() == ':'
 				end,
 			},
