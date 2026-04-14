@@ -1,28 +1,3 @@
--- Colorscheme
-
-require('catppuccin').setup({
-	flavour = 'mocha',
-	transparent_background = true,
-	float = { transparent = true, solid = false },
-
-	integrations = {
-		treesitter = true,
-		telescope = { enabled = true },
-		mini = { enabled = true },
-		native_lsp = {
-			enabled = true,
-			underlines = {
-				errors = { 'undercurl' },
-				hints = { 'undercurl' },
-				warnings = { 'undercurl' },
-				information = { 'undercurl' },
-			},
-		},
-	},
-})
-
-vim.cmd.colorscheme('catppuccin')
-
 -- Noice
 require('noice').setup({
 	lsp = {
@@ -61,35 +36,31 @@ require('noice').setup({
 })
 
 -- Bufferline
+local bufferline = require('bufferline')
 
-require('bufferline').setup({
+bufferline.setup({
 	options = {
 		always_show_bufferline = true,
+
 		diagnostics = 'nvim_lsp',
 		diagnostics_indicator = function(_, _, diag)
 			local icons = { error = ' ', warning = ' ' }
 			return (diag.error and icons.error .. diag.error or '')
 				.. (diag.warning and icons.warning .. diag.warning or '')
 		end,
+
 		offsets = {
 			{ filetype = 'snacks_layout_box' },
 		},
-		separator_style = 'slant',
-	},
-	highlights = {
-		-- slant separators: fg must match fill bg so the triangle blends in
-		fill = { bg = '#1e1e2e' },
-		separator = { fg = '#1e1e2e' },
-		separator_selected = { fg = '#1e1e2e' },
-		separator_visible = { fg = '#1e1e2e' },
+
+		style_preset = bufferline.style_preset.minimal,
 	},
 })
 
 -- Lualine
-
 require('lualine').setup({
 	options = {
-		theme = 'catppuccin-mocha',
+		theme = 'eldritch',
 		globalstatus = true,
 		section_separators = { left = '', right = '' },
 		component_separators = { left = '', right = '' },
@@ -124,14 +95,7 @@ require('lualine').setup({
 	},
 })
 
--- Alpha (Startup dashboard)
-
-local alpha = require('alpha')
-local dashboard = require('alpha.themes.dashboard')
-alpha.setup(dashboard.config)
-
 -- Fidget
-
 require('fidget').setup({
 	progress = {
 		suppress_on_insert = true,

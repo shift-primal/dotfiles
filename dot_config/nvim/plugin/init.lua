@@ -45,13 +45,14 @@ vim.pack.add({
 	-- Diagnostics
 	gh('rachartier/tiny-inline-diagnostic.nvim'),
 
+	-- Colorscheme
+	gh('eldritch-theme/eldritch.nvim'),
+
 	-- UI
-	gh('catppuccin/nvim'),
 	gh('OXY2DEV/markview.nvim'),
 	gh('nvim-lualine/lualine.nvim'),
 	gh('folke/which-key.nvim'),
 	gh('nvim-tree/nvim-web-devicons'),
-	gh('goolord/alpha-nvim'),
 	gh('folke/noice.nvim'),
 	gh('MunifTanjim/nui.nvim'),
 	gh('akinsho/bufferline.nvim'),
@@ -60,6 +61,7 @@ vim.pack.add({
 	-- Utils
 	gh('vyfor/cord.nvim'),
 	gh('bngarren/checkmate.nvim'),
+	gh('brenoprata10/nvim-highlight-colors'),
 })
 
 local function load(mod)
@@ -69,13 +71,14 @@ local function load(mod)
 	end
 end
 
+load('plugins.colorscheme')
 load('plugins.lsp')
-load('plugins.ui')
 load('plugins.conform')
 load('plugins.treesitter')
+load('plugins.snacks')
+load('plugins.ui')
 load('plugins.editor')
 load('plugins.mini')
-load('plugins.snacks')
 load('plugins.completion')
 load('plugins.diagnostics')
 load('plugins.utils')

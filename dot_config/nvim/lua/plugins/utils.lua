@@ -25,3 +25,6 @@ require('markview').setup()
 
 -- Checklist / TODO
 require('checkmate').setup()
+
+-- Highlight colors
+require('nvim-highlight-colors').setup({})

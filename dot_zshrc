@@ -5,18 +5,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # === Env ===
-
 export PATH="$HOME/.local/bin:$HOME/.dotnet/tools:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nvim
 export VISUAL=nvim
 
-# === Theme ===
+export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export PNPM_HOME="/home/kasper/.local/share/pnpm"
+export STARSHIP_CONFIG=~/.config/starship/config.toml
 
 # === Oh-my-zsh ===
-
 zstyle ':omz:update' mode reminder
 
 DISABLE_AUTO_TITLE="true"
@@ -27,18 +25,14 @@ plugins=(git aliases archlinux chezmoi colorize zsh-autosuggestions zsh-syntax-h
 source $ZSH/oh-my-zsh.sh
 
 # === Custom Aliases ===
-
 alias nvimcfg='cd ~/.config/nvim && nvim .'
 alias cfg='cd ~/.config && nvim .'
 
-# === Prompt ===
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # === Pnpm ===
-
-export PNPM_HOME="/home/kasper/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# === OMP ===
+eval "$(oh-my-posh init zsh --config '~/.config/omp/theme.omp.json')"

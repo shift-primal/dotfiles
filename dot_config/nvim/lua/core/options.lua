@@ -24,6 +24,7 @@ opt.linebreak = true
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
+opt.cursorlineopt = 'number'
 opt.signcolumn = 'yes'
 opt.termguicolors = true
 opt.scrolloff = 4
@@ -38,12 +39,12 @@ opt.list = true
 opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
 opt.smoothscroll = true
 opt.fillchars = {
-  foldopen = "",
-  foldclose = "",
-  fold = " ",
-  foldsep = " ",
-  diff = "╱",
-  eob = " ",
+	foldopen = '',
+	foldclose = '',
+	fold = ' ',
+	foldsep = ' ',
+	diff = '╱',
+	eob = ' ',
 }
 
 -- Search
@@ -83,7 +84,7 @@ opt.updatetime = 200
 opt.timeoutlen = 300
 opt.jumpoptions = 'view'
 opt.virtualedit = 'block'
-opt.wildmode = "longest:full,full"
+opt.wildmode = 'longest:full,full'
 opt.spelllang = { 'en' }
 opt.sessionoptions = {
 	'buffers',
