@@ -28,6 +28,11 @@ source $ZSH/oh-my-zsh.sh
 alias nvimcfg='cd ~/.config/nvim && nvim .'
 alias cfg='cd ~/.config && nvim .'
 
+alias yay='paru'
+alias ff='fastfetch'
+alias cd='z'
+alias ls='eza'
+
 # === Pnpm ===
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
@@ -35,4 +40,4 @@ case ":$PATH:" in
 esac
 
 # === OMP ===
-eval "$(oh-my-posh init zsh --config '~/.config/omp/theme.omp.json')"
+eval "$(oh-my-posh init zsh --config '~/.config/omp/gruvbox.omp.json')"

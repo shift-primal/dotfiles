@@ -1,4 +1,0 @@
-[mgr]
-prepend_keymap = [
-  { on = "<C-Enter>", run = "shell --orphan --confirm kitty", desc = "Open Kitty here" },
-]

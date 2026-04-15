@@ -1,0 +1,12 @@
+{
+    "rules": [
+        {
+            "action": "block",
+            "pattern": "spotify_player"
+        },
+        {
+            "action": "block",
+            "pattern": "claude"
+        }
+    ]
+}
