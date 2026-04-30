@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "default",
+        "density": "comfortable",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": true,
@@ -103,6 +103,7 @@
             "left": [
                 {
                     "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
                     "icon": "rocket",
@@ -174,14 +175,6 @@
                     "id": "plugin:usb-drive-manager"
                 },
                 {
-                    "defaultSettings": {
-                        "enableCross": true,
-                        "enableWindowsSelection": true,
-                        "screenshotEditor": "swappy"
-                    },
-                    "id": "plugin:screen-shot-and-record"
-                },
-                {
                     "iconColor": "none",
                     "id": "WallpaperSelector"
                 },
@@ -219,6 +212,7 @@
                 {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "primary",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": true,
                     "icon": "noctalia",
@@ -244,18 +238,6 @@
                     "id": "Tray",
                     "pinned": [
                     ]
-                },
-                {
-                    "defaultSettings": {
-                        "activeAnimFile": "",
-                        "activeBorderFile": "",
-                        "activeShaderFile": "",
-                        "autoApply": true,
-                        "borderSize": 2,
-                        "isSystemActive": false,
-                        "overlayPath": "~/.cache/noctalia/HVE/overlay.conf"
-                    },
-                    "id": "plugin:hyprland-visual-editor"
                 }
             ]
         }
@@ -493,10 +475,11 @@
         },
         "language": "",
         "lockOnSuspend": true,
-        "lockScreenAnimations": false,
-        "lockScreenBlur": 0,
+        "lockScreenAnimations": true,
+        "lockScreenBlur": 0.44,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
+            "DP-1"
         ],
         "lockScreenTint": 0,
         "passwordChars": false,
@@ -603,11 +586,11 @@
             "normal": true
         },
         "sounds": {
-            "criticalSoundFile": "",
-            "enabled": false,
+            "criticalSoundFile": "/home/kasper/.local/share/sfx/mixkit-gaming-lock-2848.wav",
+            "enabled": true,
             "excludedApps": "discord,firefox,chrome,chromium,edge",
-            "lowSoundFile": "",
-            "normalSoundFile": "",
+            "lowSoundFile": "/home/kasper/.local/share/sfx/mixkit-gaming-lock-2848.wav",
+            "normalSoundFile": "/home/kasper/.local/share/sfx/mixkit-gaming-lock-2848.wav",
             "separateSounds": false,
             "volume": 0.48
         }
@@ -628,7 +611,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
@@ -649,50 +632,50 @@
                 "action": "suspend",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "2"
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "hibernate",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "3"
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "reboot",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": "4"
+                "keybind": "2"
             },
             {
                 "action": "logout",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "5"
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "shutdown",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": "6"
+                "keybind": "3"
             },
             {
                 "action": "rebootToUefi",
                 "command": "",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": "7"
+                "keybind": "4"
             },
             {
                 "action": "userspaceReboot",
-                "command": "systemctl restart ssdm",
+                "command": "systemctl restart sddm",
                 "countdownEnabled": true,
                 "enabled": true,
-                "keybind": "8"
+                "keybind": "5"
             }
         ],
         "showHeader": true,
@@ -710,7 +693,7 @@
         "diskCriticalThreshold": 90,
         "diskWarningThreshold": 80,
         "enableDgpuMonitoring": true,
-        "externalMonitor": "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor",
+        "externalMonitor": "btop",
         "gpuCriticalThreshold": 90,
         "gpuWarningThreshold": 80,
         "memCriticalThreshold": 90,
@@ -774,7 +757,7 @@
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
-        "hideWallpaperFilenames": false,
+        "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
@@ -787,7 +770,7 @@
         "showHiddenFiles": false,
         "skipStartupTransition": true,
         "solidColor": "#1a1a2e",
-        "sortOrder": "name",
+        "sortOrder": "date_asc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
@@ -801,7 +784,7 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "single",
+        "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

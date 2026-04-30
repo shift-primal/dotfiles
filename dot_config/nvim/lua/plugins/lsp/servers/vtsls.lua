@@ -1,6 +1,11 @@
 return {
 	settings = {
 		typescript = {
+
+			preferences = {
+				importModuleSpecifier = "non-relative",
+			},
+
 			suggest = {
 				autoImports = true,
 				includeCompletionsForModuleExports = true,
