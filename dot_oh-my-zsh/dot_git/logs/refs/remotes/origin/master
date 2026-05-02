@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 45dd7d006ab2650273d9859f7e3224cf757a9db3 Kasper Haugestøl <kasper@haugestol.com> 1771341506 +0100	fetch --depth=1 origin: storing head
+45dd7d006ab2650273d9859f7e3224cf757a9db3 25d4d753bfe235040ebaea068b21feca8570e156 Kasper Haugestøl <kasper@haugestol.com> 1772471452 +0100	pull --quiet --rebase origin master: fast-forward
+25d4d753bfe235040ebaea068b21feca8570e156 bec3f2244a978d1e1391bc28964ba36a3cf0ad28 Kasper Haugestøl <kasper@haugestol.com> 1773752275 +0100	pull --quiet --rebase origin master: fast-forward
+bec3f2244a978d1e1391bc28964ba36a3cf0ad28 44394e7225cd2e2200fa2e6a0ed957fed6a4d5d0 Kasper Haugestøl <kasper@haugestol.com> 1774007323 +0100	pull --quiet --rebase origin master: fast-forward
+44394e7225cd2e2200fa2e6a0ed957fed6a4d5d0 f0e2160abb4a08986fc8f5e05dadfcfdd91cf3de Kasper Haugestøl <kasper@haugestol.com> 1775394779 +0200	pull --quiet --rebase origin master: fast-forward
+f0e2160abb4a08986fc8f5e05dadfcfdd91cf3de e42ac8c57bc7eb473b689ffcbb98473ba45dbab8 Kasper Haugestøl <kasper@haugestol.com> 1776507909 +0200	pull --quiet --rebase origin master: fast-forward
+e42ac8c57bc7eb473b689ffcbb98473ba45dbab8 e7aa0c56e68348afefdd6af4c5bdb314a2bd6640 Kasper Haugestøl <kasper@haugestol.com> 1777720616 +0200	pull --quiet --rebase origin master: fast-forward
