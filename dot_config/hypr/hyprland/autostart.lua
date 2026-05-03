@@ -1,5 +1,5 @@
 hl.on("hyprland.start", function()
-	hl.exec_cmd("qs -c noctalia-shell")
+	hl.exec_cmd("env QT_QPA_PLATFORMTHEME=gtk3 qs -c noctalia-shell")
 
 	hl.exec_cmd("hyprpm reload")
 

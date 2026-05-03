@@ -91,7 +91,7 @@ hl.bind(
 )
 
 -- Window Management
-hl.bind(MOD .. " + W", hl.dsp.window.kill(), { description = "Close focused window" })
+hl.bind(MOD .. " + W", hl.dsp.window.close(), { description = "Close focused window" })
 hl.bind(MOD .. " + T", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating" })
 hl.bind(MOD .. " + F", hl.dsp.window.fullscreen(), { description = "Toggle fullscreen" })
 

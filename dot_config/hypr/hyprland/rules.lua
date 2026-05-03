@@ -12,7 +12,7 @@ local opaque_classes = {
 
 local function apply_opaque_rules()
 	for _, class in ipairs(opaque_classes) do
-		hl.window_rule({ match = { class = class }, opacity = 1, 1 })
+		hl.window_rule({ match = { class = class }, opacity = 1 })
 	end
 end
 
@@ -28,7 +28,7 @@ local function merge(base, extra)
 end
 
 -- Global opacity
-hl.window_rule({ match = { class = ".*" }, opacity = opacity.active, opacity.inactive })
+hl.window_rule({ match = { class = ".*" }, opacity = string.format("%g %g", opacity.active, opacity.inactive) })
 
 -- Steam
 hl.window_rule({ match = { class = "^(steam)$", title = "negative:^(Steam)$" }, float = true })
@@ -62,7 +62,6 @@ hl.window_rule({
 })
 
 -- Apply opaque rules
-
 apply_opaque_rules()
 
 -- Layers with no animation

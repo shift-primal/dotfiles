@@ -17,7 +17,8 @@
         "iconMode": "tabler",
         "ignoreMouseInput": false,
         "overviewLayer": false,
-        "pinnedApps": [],
+        "pinnedApps": [
+        ],
         "position": "center",
         "screenshotAnnotationTool": "",
         "showCategories": true,
@@ -27,7 +28,8 @@
         "viewMode": "grid"
     },
     "audio": {
-        "mprisBlacklist": [],
+        "mprisBlacklist": [
+        ],
         "preferredPlayer": "spotify_player",
         "spectrumFrameRate": 144,
         "spectrumMirrored": true,
@@ -57,7 +59,8 @@
         "middleClickAction": "settings",
         "middleClickCommand": "",
         "middleClickFollowMouse": true,
-        "monitors": [],
+        "monitors": [
+        ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": true,
@@ -66,12 +69,13 @@
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
-        "screenOverrides": [],
+        "screenOverrides": [
+        ],
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": true,
-        "widgetSpacing": 12,
+        "widgetSpacing": 16,
         "widgets": {
             "center": [
                 {
@@ -83,8 +87,8 @@
                     "followFocusedScreen": false,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
-                    "hideUnoccupied": false,
-                    "iconScale": 0.8,
+                    "hideUnoccupied": true,
+                    "iconScale": 0.74,
                     "id": "Workspace",
                     "labelMode": "name",
                     "occupiedColor": "secondary",
@@ -97,6 +101,18 @@
                 }
             ],
             "left": [
+                {
+                    "defaultSettings": {
+                        "backupCount": 5,
+                        "backupEnabled": true,
+                        "icon": "wand",
+                        "iconColor": "primary",
+                        "includeWallpapers": true,
+                        "lastAppliedProfile": "",
+                        "profilesDir": ""
+                    },
+                    "id": "plugin:shell-profiles"
+                },
                 {
                     "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",
@@ -135,7 +151,7 @@
                     "visualizerType": "linear"
                 },
                 {
-                    "compactMode": false,
+                    "compactMode": true,
                     "diskPath": "/",
                     "iconColor": "primary",
                     "id": "SystemMonitor",
@@ -144,7 +160,7 @@
                     "showCpuTemp": true,
                     "showCpuUsage": true,
                     "showDiskAvailable": false,
-                    "showDiskUsage": false,
+                    "showDiskUsage": true,
                     "showDiskUsageAsPercent": false,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
@@ -169,6 +185,33 @@
                         "terminalCommand": "kitty"
                     },
                     "id": "plugin:usb-drive-manager"
+                },
+                {
+                    "defaultSettings": {
+                        "aurCmd": "paru -Qua 2>/dev/null",
+                        "boldText": true,
+                        "boldVer": true,
+                        "boldVerDesktop": true,
+                        "boldVerPanel": true,
+                        "closeButton": true,
+                        "customIconPath": "",
+                        "desktopTip": true,
+                        "enableColorization": false,
+                        "flatpak": true,
+                        "hideOnEmpty": false,
+                        "hoverTip": true,
+                        "iconColor": "none",
+                        "iconName": "arrow-big-down-lines",
+                        "noctalia": true,
+                        "refreshInterval": 120,
+                        "refreshTimer": true,
+                        "systemCmd": "checkupdates 2>/dev/null",
+                        "toast": true,
+                        "tooltip": true,
+                        "updateCmd": "ghostty -e bash -c 'echo \"Updating System...\";paru; flatpak update; read -n 1 -p \"Press any key to exit...\"'",
+                        "useDistroLogo": false
+                    },
+                    "id": "plugin:arch-updater"
                 },
                 {
                     "iconColor": "none",
@@ -218,106 +261,29 @@
                 {
                     "clockColor": "none",
                     "customFont": "Sans Serif",
-                    "formatHorizontal": "\uf073 ddd dd. MMM  \uf017 HH:mm",
+                    "formatHorizontal": " ddd dd. MMM   HH:mm",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
                 },
                 {
-                    "blacklist": [],
+                    "blacklist": [
+                    ],
                     "chevronColor": "none",
                     "colorizeIcons": false,
                     "drawerEnabled": true,
                     "hidePassive": false,
                     "id": "Tray",
-                    "pinned": []
-                },
-                {
-                    "defaultSettings": {
-                        "backupCount": 5,
-                        "backupEnabled": true,
-                        "icon": "wand",
-                        "iconColor": "primary",
-                        "includeWallpapers": true,
-                        "lastAppliedProfile": "",
-                        "profilesDir": ""
-                    },
-                    "id": "plugin:shell-profiles"
-                },
-                {
-                    "defaultSettings": {
-                        "autoLaunchSteam": true,
-                        "chatWidthPercent": 25,
-                        "friendsWidthPercent": 10,
-                        "gapSize": 10,
-                        "mainWidthPercent": 60,
-                        "topMarginPercent": 2.5,
-                        "windowHeightPercent": 95
-                    },
-                    "id": "plugin:hyprland-steam-overlay"
-                },
-                {
-                    "defaultSettings": {
-                        "aurCmd": "paru -Qua 2>/dev/null",
-                        "boldText": true,
-                        "boldVer": true,
-                        "boldVerDesktop": true,
-                        "boldVerPanel": true,
-                        "closeButton": true,
-                        "customIconPath": "",
-                        "desktopTip": true,
-                        "enableColorization": false,
-                        "flatpak": true,
-                        "hideOnEmpty": false,
-                        "hoverTip": true,
-                        "iconColor": "none",
-                        "iconName": "arrow-big-down-lines",
-                        "noctalia": true,
-                        "panelContext": true,
-                        "panelTooltip": true,
-                        "refreshInterval": 120,
-                        "refreshTimer": true,
-                        "systemCmd": "checkupdates 2>/dev/null",
-                        "toast": true,
-                        "tooltip": true,
-                        "updateCmd": "ghostty -e bash -c 'echo \"Updating System...\";paru; flatpak update; read -n 1 -p \"Press any key to exit...\"'",
-                        "useDistroLogo": false
-                    },
-                    "id": "plugin:arch-updater"
-                },
-                {
-                    "defaultSettings": {
-                        "completedCount": 0,
-                        "count": 0,
-                        "current_page_id": 0,
-                        "exportEmptySections": false,
-                        "exportFormat": "markdown",
-                        "exportPath": "~/Documents",
-                        "isExpanded": false,
-                        "pages": [
-                            {
-                                "id": 0,
-                                "name": "General"
-                            }
-                        ],
-                        "priorityColors": {
-                            "high": "#f44336",
-                            "low": "#9e9e9e",
-                            "medium": "#2196f3"
-                        },
-                        "showBackground": true,
-                        "showCompleted": true,
-                        "todos": [],
-                        "useCustomColors": false
-                    },
-                    "id": "plugin:todo"
+                    "pinned": [
+                    ]
                 }
             ]
         }
     },
     "brightness": {
-        "backlightDeviceMappings": [],
+        "backlightDeviceMappings": [
+        ],
         "brightnessStep": 5,
         "enableDdcSupport": true,
         "enforceMinimum": true
@@ -495,7 +461,8 @@
             "DP-1"
         ],
         "onlySameOutput": true,
-        "pinnedApps": [],
+        "pinnedApps": [
+        ],
         "pinnedStatic": false,
         "position": "bottom",
         "showDockIndicator": false,
@@ -601,7 +568,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": true,
         "hideWeatherTimezone": false,
-        "name": "B\u00f8verbru",
+        "name": "Bøverbru",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -748,13 +715,6 @@
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "5"
-            },
-            {
-                "action": "rebootToWindows",
-                "command": "sudo grub-reboot \"Windows Boot Manager (on /dev/nvme0n1p1)\" && sudo reboot",
-                "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "6"
             }
         ],
         "showHeader": true,
@@ -832,12 +792,14 @@
         "directory": "/home/kasper/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
-        "favorites": [],
+        "favorites": [
+        ],
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
-        "monitorDirectories": [],
+        "monitorDirectories": [
+        ],
         "overviewBlur": 0.4,
         "overviewEnabled": false,
         "overviewTint": 0.6,
