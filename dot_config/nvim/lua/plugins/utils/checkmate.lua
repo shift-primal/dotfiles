@@ -3,5 +3,14 @@ return {
 	ft = "markdown", -- Lazy loads for Markdown files matching patterns in 'files'
 	opts = {
 		-- files = { "*.md" }, -- any .md file (instead of defaults)
+		---- checkmate.Config
+		todo_states = {
+			unchecked = {
+				marker = "[ ]",
+			},
+			checked = {
+				marker = "[x]",
+			},
+		},
 	},
 }

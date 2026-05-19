@@ -2,8 +2,7 @@ hl.config({
 	input = {
 		kb_layout = "no",
 		kb_variant = "nodeadkeys",
-		-- kb_options = "ctl:swapescape"
-
+		-- kb_options = "caps:swapescape",
 		accel_profile = "flat",
 
 		touchpad = {
