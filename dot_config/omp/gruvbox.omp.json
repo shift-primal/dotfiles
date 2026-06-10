@@ -5,6 +5,12 @@
             "alignment": "left",
             "segments": [
                 {
+                    "foreground": "#fe8019",
+                    "style": "diamond",
+                    "template": "{{ if .SSHSession }} <b>{{ .UserName }}@{{ .HostName }}</b> {{ end }}",
+                    "type": "session"
+                },
+                {
                     "foreground": "#b8bb26",
                     "options": {
                         "style": "folder"

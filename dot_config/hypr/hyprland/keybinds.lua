@@ -52,7 +52,7 @@ hl.bind(
 )
 
 -- Noctalia Shell — System Utils
-hl.bind(MOD .. " + P", noctalia("plugin:screen-shot-and-record screenshot"), { description = "Screenshot region" })
+hl.bind(MOD .. " + S", noctalia("plugin:screen-shot-and-record screenshot"), { description = "Screenshot region" })
 hl.bind(MOD .. " + R", noctalia("plugin:screen-shot-and-record recordsound"), { description = "Record region" })
 hl.bind(MOD .. " + CTRL + L", noctalia("lockScreen lock"), { description = "Lock computer" })
 
@@ -62,7 +62,7 @@ hl.bind(MOD .. " + X", hl.dsp.send_shortcut({ mods = "CTRL", key = "X" }), { des
 
 -- Noctalia Shell — Menus & Tools
 hl.bind(MOD .. " + B", noctalia("plugin:keybind-cheatsheet toggle"), { description = "Keybind cheatsheet" })
-hl.bind(MOD .. " + S", noctalia("plugin:screen-toolkit toggle"), { description = "Screen toolkit" })
+hl.bind(MOD .. " + SHIFT + S", noctalia("plugin:screen-toolkit toggle"), { description = "Screen toolkit" })
 hl.bind(MOD .. " + SHIFT + C", noctalia("plugin:screen-toolkit colorPicker"), { description = "Color picker" })
 hl.bind(MOD .. " + M", noctalia("plugin:screen-toolkit measure"), { description = "Measure screen" })
 hl.bind(MOD .. " + Y", noctalia("launcher clipboard"), { description = "Clipboard history" })

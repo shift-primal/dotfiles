@@ -21,3 +21,9 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.spell = false
 	end,
 })
+
+-- blink.cmp's documentation popup uses filetype "blink-cmp-documentation" for its
+-- (markdown) LSP hover content. Treesitter doesn't know that filetype, so snacks.image
+-- never attaches to render the `![img](data:image/svg+xml;base64,...)` icon previews
+-- inside it. Registering it as markdown fixes both the attach check and the parser lookup.
+vim.treesitter.language.register("markdown", "blink-cmp-documentation")

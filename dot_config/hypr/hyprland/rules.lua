@@ -1,6 +1,11 @@
+-- local opacity = {
+-- 	active = 0.99,
+-- 	inactive = 0.95,
+-- }
+
 local opacity = {
-	active = 0.99,
-	inactive = 0.95,
+	active = 1,
+	inactive = 1,
 }
 
 local opaque_classes = {
