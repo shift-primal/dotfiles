@@ -1,6 +1,7 @@
 return {
 	settings = {
 		typescript = {
+			format = { enable = false },
 
 			preferences = {
 				importModuleSpecifier = "non-relative",
@@ -20,6 +21,14 @@ return {
 				enumMemberValues = { enabled = true },
 			},
 		},
+
+		javascript = {
+			format = { enable = false },
+		},
+	},
+
+	vtsls = {
+		autoUseWorkspaceTsdk = true,
 	},
 
 	capabilities = {

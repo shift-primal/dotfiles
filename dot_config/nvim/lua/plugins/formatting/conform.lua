@@ -6,13 +6,13 @@ return {
 			cs = { "csharpier" },
 			sql = { "sqlfluff" },
 			toml = { "tombi" },
-			javascript = { "prettier" },
-			typescript = { "prettier" },
-			javascriptreact = { "prettier" },
-			typescriptreact = { "prettier" },
-			css = { "prettier" },
-			html = { "prettier" },
-			json = { "prettier" },
+			javascript = { "biome", "biome-organize-imports" },
+			javascriptreact = { "biome", "biome-organize-imports" },
+			typescript = { "biome", "biome-organize-imports" },
+			typescriptreact = { "biome", "biome-organize-imports" },
+			css = { "biome" },
+			html = { "biome" },
+			json = { "biome" },
 		})
 
 		opts.formatters = vim.tbl_extend("force", opts.formatter or {}, {

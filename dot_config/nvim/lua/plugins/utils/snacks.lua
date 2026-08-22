@@ -9,15 +9,7 @@ end
 return {
 	"folke/snacks.nvim",
 	opts = {
-		image = {
-			enabled = true,
-			doc = {
-				enabled = true,
-				inline = true,
-				max_width = 80,
-				max_height = 40,
-			},
-		},
+
 		picker = {
 			grep = {
 				hidden = true,

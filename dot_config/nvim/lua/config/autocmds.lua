@@ -16,14 +16,28 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- Disable spell-checking in markdown
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "markdown" },
+	pattern = { "markdown", "text" },
 	callback = function()
 		vim.opt_local.spell = false
 	end,
 })
 
--- blink.cmp's documentation popup uses filetype "blink-cmp-documentation" for its
--- (markdown) LSP hover content. Treesitter doesn't know that filetype, so snacks.image
--- never attaches to render the `![img](data:image/svg+xml;base64,...)` icon previews
--- inside it. Registering it as markdown fixes both the attach check and the parser lookup.
-vim.treesitter.language.register("markdown", "blink-cmp-documentation")
+-- Inlay hints only in normal mode: each hint request forces full type
+-- inference of the visible range, which backs up tsserver while typing
+local hints_paused = {}
+vim.api.nvim_create_autocmd("InsertEnter", {
+	callback = function(args)
+		if vim.lsp.inlay_hint.is_enabled({ bufnr = args.buf }) then
+			hints_paused[args.buf] = true
+			vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
+		end
+	end,
+})
+vim.api.nvim_create_autocmd("InsertLeave", {
+	callback = function(args)
+		if hints_paused[args.buf] then
+			hints_paused[args.buf] = nil
+			vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+		end
+	end,
+})
