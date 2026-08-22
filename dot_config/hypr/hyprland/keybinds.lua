@@ -1,5 +1,5 @@
 local MOD = "SUPER"
-local IPC = "qs -c noctalia-shell ipc call"
+local NOC = "noctalia msg"
 
 local apps = {
 	terminal = "kitty",
@@ -13,7 +13,7 @@ local apps = {
 }
 
 local function noctalia(cmd)
-	return hl.dsp.exec_cmd(IPC .. " " .. cmd)
+	return hl.dsp.exec_cmd(NOC .. " " .. cmd)
 end
 
 local function term(app)
@@ -21,54 +21,79 @@ local function term(app)
 end
 
 -- Noctalia Shell — Core
-hl.bind(MOD .. " + SPACE", noctalia("launcher toggle"), { description = "Noctalia launcher" })
-hl.bind(MOD .. " + ESCAPE", noctalia("controlCenter toggle"), { description = "Noctalia control center" })
-hl.bind(MOD .. " + COMMA", noctalia("settings toggle"), { description = "Noctalia settings panel" })
+hl.bind(MOD .. " + SPACE", noctalia("panel-toggle launcher"), { description = "Noctalia launcher" })
+hl.bind(MOD .. " + ESCAPE", noctalia("panel-toggle control-center"), { description = "Noctalia control center" })
+hl.bind(MOD .. " + COMMA", noctalia("settings-toggle"), { description = "Noctalia settings panel" })
 
 -- Media & Brightness
 hl.bind(
 	"XF86AudioRaiseVolume",
-	noctalia("volume increase"),
+	noctalia("volume-up"),
 	{ repeating = true, locked = true, description = "Raise volume" }
 )
 hl.bind(
 	"XF86AudioLowerVolume",
-	noctalia("volume decrease"),
+	noctalia("volume-down"),
 	{ repeating = true, locked = true, description = "Lower volume" }
 )
-hl.bind("XF86AudioMute", noctalia("volume muteOutput"), { locked = true, description = "Mute volume" })
+hl.bind("XF86AudioMute", noctalia("volume-mute"), { locked = true, description = "Mute volume" })
 hl.bind(MOD .. " + ALT + LEFT", noctalia("media previous"), { locked = true, description = "Previous song" })
 hl.bind(MOD .. " + ALT + RIGHT", noctalia("media next"), { locked = true, description = "Next song" })
-hl.bind(MOD .. " + ALT + SPACE", noctalia("media playPause"), { locked = true, description = "Play/pause song" })
+hl.bind(MOD .. " + ALT + SPACE", noctalia("media toggle"), { locked = true, description = "Play/pause song" })
 hl.bind(
 	"XF86MonBrightnessUp",
-	noctalia("brightness increase"),
+	noctalia("brightness-up"),
 	{ repeating = true, locked = true, description = "Raise brightness" }
 )
 hl.bind(
 	"XF86MonBrightnessDown",
-	noctalia("brightness decrease"),
+	noctalia("brightness-down"),
 	{ repeating = true, locked = true, description = "Lower brightness" }
 )
 
--- Noctalia Shell — System Utils
-hl.bind(MOD .. " + S", noctalia("plugin:screen-shot-and-record screenshot"), { description = "Screenshot region" })
-hl.bind(MOD .. " + R", noctalia("plugin:screen-shot-and-record recordsound"), { description = "Record region" })
-hl.bind(MOD .. " + CTRL + L", noctalia("lockScreen lock"), { description = "Lock computer" })
+-- Screenshot & recording
+
+hl.bind(MOD .. " + S", noctalia("screenshot-region"), { description = "Screenshot region" })
+hl.bind(
+	MOD .. " + SHIFT + S",
+	noctalia("plugin alexander/screen-toolkit:service all toggle"),
+	{ description = "Screen toolkit panel - Toggle" }
+)
+hl.bind(
+	MOD .. " + R",
+	noctalia("plugin noctalia/screen_recorder:service all toggle"),
+	{ description = "Record region" }
+)
+
+-- Session
+
+hl.bind(MOD .. " + CTRL + L", noctalia("session lock"), { description = "Lock computer" })
+hl.bind("CTRL + ALT + DELETE", noctalia("panel-toggle session"), { description = "Power menu" })
+
+-- Clipboard
 
 hl.bind(MOD .. " + C", hl.dsp.send_shortcut({ mods = "CTRL", key = "Insert" }), { description = "Universal copy" })
 hl.bind(MOD .. " + V", hl.dsp.send_shortcut({ mods = "SHIFT", key = "Insert" }), { description = "Universal paste" })
 hl.bind(MOD .. " + X", hl.dsp.send_shortcut({ mods = "CTRL", key = "X" }), { description = "Universal cut" })
+hl.bind(MOD .. " + Y", noctalia("panel-toggle clipboard"), { description = "Clipboard history" })
 
--- Noctalia Shell — Menus & Tools
-hl.bind(MOD .. " + B", noctalia("plugin:keybind-cheatsheet toggle"), { description = "Keybind cheatsheet" })
-hl.bind(MOD .. " + SHIFT + S", noctalia("plugin:screen-toolkit toggle"), { description = "Screen toolkit" })
-hl.bind(MOD .. " + SHIFT + C", noctalia("plugin:screen-toolkit colorPicker"), { description = "Color picker" })
-hl.bind(MOD .. " + M", noctalia("plugin:screen-toolkit measure"), { description = "Measure screen" })
-hl.bind(MOD .. " + Y", noctalia("launcher clipboard"), { description = "Clipboard history" })
-hl.bind(MOD .. " + E", noctalia("launcher emoji"), { description = "Emojis" })
-hl.bind(MOD .. " + DELETE", noctalia("systemMonitor toggle"), { description = "System monitor" })
-hl.bind("CTRL + ALT + DELETE", noctalia("sessionMenu toggle"), { description = "Power menu" })
+-- Tools
+
+hl.bind(
+	MOD .. " + B",
+	noctalia("panel-toggle kenn/keybind-cheatsheet:cheatsheet"),
+	{ description = "Keybind cheatsheet" }
+)
+hl.bind(
+	MOD .. " + SHIFT + C",
+	noctalia("plugin alexander/screen-toolkit:service all colorPicker"),
+	{ description = "Color picker" }
+)
+hl.bind(
+	MOD .. " + M",
+	noctalia("plugin alexander/screen-toolkit:service all measure"),
+	{ description = "Measure screen" }
+)
 
 -- App Launchers
 hl.bind(MOD .. " + RETURN", hl.dsp.exec_cmd(apps.terminal), { description = "Terminal" })

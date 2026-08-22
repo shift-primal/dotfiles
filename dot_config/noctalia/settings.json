@@ -87,7 +87,7 @@
                     "followFocusedScreen": false,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
-                    "hideUnoccupied": true,
+                    "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "name",
@@ -95,8 +95,8 @@
                     "pillSize": 0.66,
                     "showApplications": true,
                     "showApplicationsHover": true,
-                    "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": true,
+                    "showBadge": false,
+                    "showLabelsOnlyWhenOccupied": false,
                     "unfocusedIconsOpacity": 1
                 }
             ],
@@ -537,7 +537,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": true,
         "hideWeatherTimezone": false,
-        "name": "Bøverbru",
+        "name": "Paradis",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -555,7 +555,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid"
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -656,13 +656,6 @@
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "L"
-            },
-            {
-                "action": "rebootToWindows",
-                "command": "sudo grub-reboot \"Windows Boot Manager (on /dev/nvme0n1p1)\" && sudo reboot",
-                "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "W"
             },
             {
                 "action": "rebootToUefi",

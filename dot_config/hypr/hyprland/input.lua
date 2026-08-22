@@ -4,6 +4,7 @@ hl.config({
 		kb_variant = "nodeadkeys",
 		-- kb_options = "caps:swapescape",
 		accel_profile = "flat",
+		sensitivity = -0.2,
 
 		touchpad = {
 			natural_scroll = true,
