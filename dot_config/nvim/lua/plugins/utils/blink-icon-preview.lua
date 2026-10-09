@@ -11,9 +11,9 @@ return {
 				enabled = true,
 				doc = {
 					enabled = true,
-					inline = true,
-					max_width = 80,
-					max_height = 40,
+					inline = false,
+					max_width = 20,
+					max_height = 10,
 				},
 				convert = {
 					magick = {

@@ -3,50 +3,31 @@ return {
 		"shatur/neovim-ayu",
 		main = "ayu",
 		opts = {
-			overrides = {
-				Normal = { bg = "None" },
-				NormalFloat = { bg = "none" },
-				ColorColumn = { bg = "None" },
-				SignColumn = { bg = "None" },
-				Folded = { bg = "None" },
-				FoldColumn = { bg = "None" },
-				CursorLine = { bg = "None" },
-				CursorColumn = { bg = "None" },
-				VertSplit = { bg = "None" },
-				LspReferenceText = { bold = false },
-				LspReferenceRead = { bold = false },
-				LspReferenceWrite = { bold = false },
-			},
+			overrides = function()
+				local colors = require("ayu.colors")
+				colors.accent = "#D75858"
+				return {
+					Normal = { bg = "None" },
+					NormalFloat = { bg = "none" },
+					ColorColumn = { bg = "None" },
+					SignColumn = { bg = "None" },
+					Folded = { bg = "None" },
+					FoldColumn = { bg = "None" },
+					CursorLine = { bg = "None" },
+					CursorColumn = { bg = "None" },
+					LspReferenceText = { bold = false },
+					LspReferenceRead = { bold = false },
+					LspReferenceWrite = { bold = false },
+
+					WinSeparator = { fg = colors.ui, bg = "None" },
+					FloatBorder = { fg = colors.ui, bg = "None" },
+				}
+			end,
 		},
 	},
 
 	{
 		"LazyVim/LazyVim",
-		opts = { colorscheme = "ayu-dark" },
+		opts = { colorscheme = "ayu-dark-bordered" },
 	},
 }
-
--- {
--- 	"ellisonleao/gruvbox.nvim",
--- 	priority = 1000,
--- 	config = true,
--- 	opts = function()
--- 		local palette = require("gruvbox").palette
--- 		return {
--- 			overrides = {
--- 				["@tag.delimiter"] = { fg = palette.light1 },
--- 				["@tag.delimiter.jsx"] = { fg = palette.light1 },
--- 				["@tag.delimiter.tsx"] = { fg = palette.light1 },
--- 				LspReferenceText = { bg = palette.dark1, bold = false },
--- 				LspReferenceRead = { bg = palette.dark1, bold = false },
--- 				LspReferenceWrite = { bg = palette.dark2, bold = false },
--- 			},
--- 		}
--- 	end,
--- },
--- {
--- 	"LazyVim/LazyVim",
--- 	opts = {
--- 		colorscheme = "gruvbox",
--- 	},
--- },

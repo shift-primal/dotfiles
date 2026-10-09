@@ -2,9 +2,11 @@ return {
 	settings = {
 		typescript = {
 			format = { enable = false },
-
 			preferences = {
 				importModuleSpecifier = "non-relative",
+				autoImportFileExcludePatterns = {
+					"**/node_modules/@base-ui/react/**",
+				},
 			},
 
 			suggest = {

@@ -1,11 +1,8 @@
-# === Anything that requires console input must go above this block ===
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Direnv 
 eval "$(direnv hook zsh)"
+
+# Bitwarden ssh
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 # Env
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
@@ -15,7 +12,6 @@ export VISUAL=nvim
 export ZSH="$HOME/.oh-my-zsh"
 
 export PNPM_HOME="/home/kasper/.local/share/pnpm"
-export STARSHIP_CONFIG=~/.config/starship/config.toml
 
 # Aliases 
 alias nvimcfg='cd ~/.config/nvim && nvim .'
@@ -24,22 +20,19 @@ alias cfg='cd ~/.config && nvim .'
 alias py='python'
 alias yay='paru'
 alias ff='fastfetch'
-alias cd='z'
 alias ls='eza'
 
 alias restartnoc='pkill qs && qs -c noctalia-shell & disown'
 
-# Oh-my-posh
-eval "$(oh-my-posh init zsh --config '~/.config/omp/gruvbox.omp.json')"
-
-# Pnpm
+# pnpm
 export PNPM_HOME="/home/kasper/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
+# pnpm end
 
-## Oh-my-zsh
+
 export DISABLE_AUTO_TITLE='true'
 
 zstyle ':omz:update' mode reminder
@@ -47,6 +40,22 @@ zstyle ':omz:update' mode reminder
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 
+
+
 plugins=(git aliases archlinux chezmoi colorize zsh-autosuggestions zsh-syntax-highlighting eza zoxide)
 
+
+
+export _ZO_DOCTOR=0
 source $ZSH/oh-my-zsh.sh
+[[ ${TERM:-} != "dumb" ]] && command -v starship &> /dev/null && eval "$(starship init zsh)"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/kasper/.local/bin:$PATH"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<
